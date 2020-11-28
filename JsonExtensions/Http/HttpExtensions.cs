@@ -16,22 +16,13 @@ namespace JsonExtensions.Http
         /// </summary>
         public static async Task<JsonElement> ReadAsJsonAsync(
             this HttpContent httpContent,
-            JsonDocumentOptions options = default,
             CancellationToken cancellationToken = default)
         {
             using var stream = await httpContent.ReadAsStreamAsync(cancellationToken);
-            using var document = await JsonDocument.ParseAsync(stream, options, cancellationToken);
+            using var document = await JsonDocument.ParseAsync(stream, default, cancellationToken);
 
             return document.RootElement.Clone();
         }
-
-        /// <summary>
-        /// Reads the content as JSON.
-        /// </summary>
-        public static async Task<JsonElement> ReadAsJsonAsync(
-            this HttpContent httpContent,
-            CancellationToken cancellationToken = default) =>
-            await httpContent.ReadAsJsonAsync(default, cancellationToken);
 
         /// <summary>
         /// Sends a GET request and reads the response content as JSON.
