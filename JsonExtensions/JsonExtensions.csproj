@@ -8,17 +8,11 @@
     <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/blob/master/Changelog.md</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
-    <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <PublishRepositoryUrl>True</PublishRepositoryUrl>
-    <EmbedUntrackedSources>True</EmbedUntrackedSources>
-    <IncludeSymbols>True</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
-
-  <!-- Disable nullability warnings on older frameworks because there is no nullability info for BCL -->
-  <PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <Nullable>annotations</Nullable>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
