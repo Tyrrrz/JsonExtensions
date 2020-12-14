@@ -2,45 +2,36 @@
 
 // Polyfills to bridge the missing APIs in older versions of the framework/standard.
 
-#if NETSTANDARD2_0 || NETCOREAPP3_0
-namespace System.Net.Http
-{
-    using IO;
-    using Threading;
-    using Threading.Tasks;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net.Http;
+using System.Threading;
+using System.Threading.Tasks;
 
-    internal static class PolyfillExtensions
+#if NETSTANDARD2_0 || NETCOREAPP3_0
+internal static partial class PolyfillExtensions
+{
+    public static async Task<Stream> ReadAsStreamAsync(
+        this HttpContent httpContent,
+        CancellationToken cancellationToken = default)
     {
-        public static async Task<Stream> ReadAsStreamAsync(
-            this HttpContent httpContent,
-            CancellationToken cancellationToken = default)
-        {
-            cancellationToken.ThrowIfCancellationRequested();
-            return await httpContent.ReadAsStreamAsync();
-        }
+        cancellationToken.ThrowIfCancellationRequested();
+        return await httpContent.ReadAsStreamAsync();
     }
 }
 #endif
 
 #if NETSTANDARD2_0
-namespace System
+internal static partial class PolyfillExtensions
 {
-    internal static class PolyfillExtensions
-    {
-        public static string[] Split(this string str, char c, StringSplitOptions options = StringSplitOptions.None) =>
-            str.Split(new[] {c}, options);
-    }
-}
+    public static string[] Split(this string str, char c, StringSplitOptions options = StringSplitOptions.None) =>
+        str.Split(new[] {c}, options);
 
-namespace System.Collections.Generic
-{
-    internal static class PolyfillExtensions
+    public static void Deconstruct<TKey, TValue>(this KeyValuePair<TKey, TValue> pair, out TKey key, out TValue value)
     {
-        public static void Deconstruct<TKey, TValue>(this KeyValuePair<TKey, TValue> pair, out TKey key, out TValue value)
-        {
-            key = pair.Key;
-            value = pair.Value;
-        }
+        key = pair.Key;
+        value = pair.Value;
     }
 }
 #endif
