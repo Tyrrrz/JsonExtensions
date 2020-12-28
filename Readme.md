@@ -6,7 +6,7 @@
 [![Downloads](https://img.shields.io/nuget/dt/JsonExtensions.svg)](https://nuget.org/packages/JsonExtensions)
 [![Donate](https://img.shields.io/badge/donate-$$$-purple.svg)](https://tyrrrz.me/donate)
 
-**Project status: active**.
+✅ **Project status: active**.
 
 Extensions for working with [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json).
 
