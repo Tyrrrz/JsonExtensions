@@ -8,7 +8,7 @@
 
 ✅ **Project status: active**.
 
-Extensions for working with [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json).
+This library provides a set of helpful utilities for types defined in the [System.Text.Json](https://docs.microsoft.com/en-us/dotnet/api/system.text.json) namespace.
 
 ## Download
 
@@ -16,9 +16,9 @@ Extensions for working with [System.Text.Json](https://docs.microsoft.com/en-us/
 
 ## Usage
 
-### Shorthand for parsing `JsonElement`
+### Parsing JsonElement
 
-You can use the static methods on `Json` class to parse JSON directly into a stateless `JsonElement`, bypassing `JsonDocument`:
+You can use the static methods on `Json` class to parse JSON directly into a stateless `JsonElement` instance, without having to deal with `JsonDocument` in the process:
 
 ```csharp
 using JsonExtensions;
@@ -29,9 +29,9 @@ var jsonElement = Json.Parse(jsonRaw); // returns JsonElement
 var jsonElement = Json.TryParse(jsonRaw); // returns null in case of invalid JSON
 ```
 
-### Optional reading
+### Null-safe reading
 
-You can use the extension methods on `JsonElement` to parse content in a more fault-tolerant way:
+This library offers many extension methods for `JsonElement` that allow you to read content in a more fault-tolerant way:
 
 ```csharp
 using JsonExtensions.Reading;
@@ -76,7 +76,7 @@ foreach (var (name, child) in jsonElement.EnumerateObjectOrEmpty())
 }
 ```
 
-Some of these methods can be chained together as well:
+Some of these methods can be also chained together using the null-conditional operator:
 
 ```csharp
 // Returns null if:
@@ -86,23 +86,9 @@ Some of these methods can be chained together as well:
 var maybeInt32 = jsonElement.GetPropertyOrNull("prop")?.GetInt32OrNull();
 ```
 
-### Get a child by path
+### Null-safe writing
 
-Using `jsonElement.GetPropertyByPathOrNull(...)` or `jsonElement.GetPropertyByPath(...)`, you can get an inner child by specifying its path:
-
-```csharp
-var json = Json.Parse("{\"foo\":{\"bar\":{\"baz\":13}}}");
-
-var child = json.GetPropertyByPath("foo.bar.baz");
-
-var value = child.GetInt32(); // 13
-```
-
-Note: currently only very basic paths are supported.
-
-### Optional writing
-
-The library provides extensions that allow you to write `Nullable<T>` instances directly with `Utf8JsonWriter`:
+Similarly, there are also extension methods for `Utf8JsonWriter` that allow writing nullable versions of common value types:
 
 ```csharp
 using JsonExtensions.Writing;
@@ -116,9 +102,9 @@ writer.WriteBoolean("prop", new bool?(true));
 writer.WriteBoolean("prop", new bool?());
 ```
 
-### Reading JSON from HTTP
+### Parsing JSON from HTTP
 
-There are also extensions to read `HttpContent` by parsing it as a `JsonElement`:
+To make it easier to read JSON that comes from HTTP, this library provides extension methods on `HttpContent` and `HttpClient`:
 
 ```csharp
 using JsonExtensions.Http;
@@ -133,3 +119,18 @@ using var request = new HttpRequestMessage(HttpMethod.Post, "...");
 using var response = await httpClient.SendAsync(request); 
 var json = await response.Content.ReadAsJsonAsync();
 ```
+
+### Accessing children by path
+
+Using `jsonElement.GetPropertyByPathOrNull(...)` or `jsonElement.GetPropertyByPath(...)`, you can get an inner child by specifying its path:
+
+```csharp
+var json = Json.Parse("{\"foo\":{\"bar\":{\"baz\":13}}}");
+
+var child = json.GetPropertyByPath("foo.bar.baz");
+
+var value = child.GetInt32(); // 13
+```
+
+> Note this only supports basic paths involving child access operators.
+It doesn't (yet) have full support for JPath.
