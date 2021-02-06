@@ -4,7 +4,7 @@ using System.Text.Json;
 namespace JsonExtensions.Writing
 {
     /// <summary>
-    /// Extensions for <see cref="Utf8JsonWriter"/> for dealing with unpredictable data.
+    /// Extensions for <see cref="Utf8JsonWriter"/> that enable conditional writing for nullable types.
     /// </summary>
     public static class OptionalExtensions
     {

@@ -4,7 +4,7 @@ using System.Text.Json;
 namespace JsonExtensions.Reading
 {
     /// <summary>
-    /// Extensions for <see cref="JsonElement"/> for dealing with unpredictable data.
+    /// Extensions for reading content from <see cref="JsonElement"/> in a fault-tolerant way.
     /// </summary>
     public static class OptionalExtensions
     {
