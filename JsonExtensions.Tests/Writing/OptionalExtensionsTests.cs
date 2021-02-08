@@ -1,6 +1,6 @@
 ﻿using System;
 using FluentAssertions;
-using JsonExtensions.Tests.Internal;
+using JsonExtensions.Tests.Utils;
 using JsonExtensions.Writing;
 using Xunit;
 

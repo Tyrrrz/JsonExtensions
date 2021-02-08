@@ -3,11 +3,11 @@ using System.IO;
 using System.Text;
 using System.Text.Json;
 
-namespace JsonExtensions.Tests.Internal
+namespace JsonExtensions.Tests.Utils
 {
     internal class InMemoryJsonWriterContext : IDisposable
     {
-        private readonly MemoryStream _buffer = new MemoryStream();
+        private readonly MemoryStream _buffer = new();
 
         public Utf8JsonWriter Writer { get; }
 
