@@ -12,7 +12,7 @@ This library provides a set of helpful utilities for types defined in the [Syste
 
 ## Download
 
-- [NuGet](https://nuget.org/packages/JsonExtensions): `dotnet add package JsonExtensions`
+📦 [NuGet](https://nuget.org/packages/JsonExtensions): `dotnet add package JsonExtensions`
 
 ## Usage
 
