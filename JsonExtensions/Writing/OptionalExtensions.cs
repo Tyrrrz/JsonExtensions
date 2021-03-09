@@ -13,7 +13,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteBooleanValue(this Utf8JsonWriter writer, bool? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteBooleanValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -33,7 +33,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, byte? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -53,7 +53,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, decimal? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -73,7 +73,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, double? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -93,7 +93,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, float? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -113,7 +113,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, short? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -133,7 +133,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, int? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -153,7 +153,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, long? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -173,7 +173,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, sbyte? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -193,7 +193,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, ushort? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -213,7 +213,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, uint? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -233,7 +233,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteNumberValue(this Utf8JsonWriter writer, ulong? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteNumberValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -253,7 +253,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteStringValue(this Utf8JsonWriter writer, Guid? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteStringValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -273,7 +273,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteStringValue(this Utf8JsonWriter writer, DateTime? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteStringValue(value.Value);
             else
                 writer.WriteNullValue();
@@ -293,7 +293,7 @@ namespace JsonExtensions.Writing
         /// </summary>
         public static void WriteStringValue(this Utf8JsonWriter writer, DateTimeOffset? value)
         {
-            if (value != null)
+            if (value is not null)
                 writer.WriteStringValue(value.Value);
             else
                 writer.WriteNullValue();
