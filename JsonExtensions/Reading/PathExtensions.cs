@@ -22,7 +22,7 @@ namespace JsonExtensions.Reading
             var currentElement = new JsonElement?(element);
             foreach (var propertyName in propertyNames)
             {
-                currentElement = currentElement?.GetPropertyOrNull(propertyName);
+                currentElement = currentElement.Value.GetPropertyOrNull(propertyName);
 
                 if (currentElement is null)
                     break;

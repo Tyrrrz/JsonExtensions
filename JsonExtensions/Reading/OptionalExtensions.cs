@@ -23,8 +23,7 @@ namespace JsonExtensions.Reading
             }
 
             if (element.TryGetProperty(propertyName, out var result) &&
-                result.ValueKind != JsonValueKind.Null &&
-                result.ValueKind != JsonValueKind.Undefined)
+                result.ValueKind is not JsonValueKind.Null and not JsonValueKind.Undefined)
             {
                 return result;
             }
@@ -50,8 +49,7 @@ namespace JsonExtensions.Reading
 
             var child = element[index];
 
-            if (child.ValueKind == JsonValueKind.Null ||
-                child.ValueKind == JsonValueKind.Undefined)
+            if (child.ValueKind is JsonValueKind.Null or JsonValueKind.Undefined)
             {
                 return null;
             }
@@ -108,16 +106,12 @@ namespace JsonExtensions.Reading
         ///
         /// Returns null if the element contains a value of any other kind.
         /// </summary>
-        public static bool? GetBooleanOrNull(this JsonElement element)
+        public static bool? GetBooleanOrNull(this JsonElement element) => element.ValueKind switch
         {
-            if (element.ValueKind == JsonValueKind.True)
-                return true;
-
-            if (element.ValueKind == JsonValueKind.False)
-                return false;
-
-            return null;
-        }
+            JsonValueKind.True => true,
+            JsonValueKind.False => false,
+            _ => null
+        };
 
         /// <summary>
         /// Gets the value of the element as a <see cref="byte"/>.
@@ -300,13 +294,10 @@ namespace JsonExtensions.Reading
         ///
         /// Returns null if the element contains a value of any other kind.
         /// </summary>
-        public static string? GetStringOrNull(this JsonElement element)
-        {
-            if (element.ValueKind == JsonValueKind.String)
-                return element.GetString();
-
-            return null;
-        }
+        public static string? GetStringOrNull(this JsonElement element) =>
+            element.ValueKind == JsonValueKind.String
+                ? element.GetString()
+                : null;
 
         /// <summary>
         /// Gets the value of the element as a <see cref="Guid"/>.
