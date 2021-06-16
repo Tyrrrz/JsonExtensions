@@ -36,7 +36,7 @@ This library offers many extension methods for `JsonElement` that allow you to r
 ```csharp
 using JsonExtensions.Reading;
 
-var jsonElement = ...
+var jsonElement = ...;
 
 // Gets a property or returns null if:
 // - element is not an object
@@ -50,13 +50,20 @@ var maybeProperty = jsonElement.GetPropertyOrNull("prop");
 // - child is null
 var maybeChild = jsonElement.GetByIndexOrNull(3);
 
-// Gets the value coerced into specified type or returns null if:
+// Gets the value converted into specified type or returns null if:
 // - element is null
 // - element's kind doesn't match the specified type
 // - the value cannot be parsed into the specified type
 var maybeString = jsonElement.GetStringOrNull();
 var maybeInt32 = jsonElement.GetInt32OrNull();
 var maybeGuid = jsonElement.GetGuidOrNull();
+
+// Gets the value coerced into specified type or returns null if:
+// - element is null
+// - element's kind is not string and doesn't match the specified type
+// - the value cannot be parsed into the specified type
+var maybeInt32Coerced = jsonElement.GetInt32CoercedOrNull();
+var maybeDoubleCoerced = jsonElement.GetDoubleCoercedOrNull();
 
 // Enumerates the array/object
 // or returns null if the element is not an array/object
@@ -76,13 +83,13 @@ foreach (var (name, child) in jsonElement.EnumerateObjectOrEmpty())
 }
 ```
 
-Some of these methods can be also chained together using the null-conditional operator:
+Most of these methods can be also chained together using the null-conditional operator:
 
 ```csharp
 // Returns null if:
 // - property doesn't exist
 // - property is null
-// - property's value cannot be coerced into the specified type
+// - property's value cannot be converted into the specified type
 var maybeInt32 = jsonElement.GetPropertyOrNull("prop")?.GetInt32OrNull();
 ```
 
@@ -104,7 +111,7 @@ writer.WriteBoolean("prop", new bool?());
 
 ### Parsing JSON from HTTP
 
-To make it easier to read JSON that comes from HTTP, this library provides extension methods on `HttpContent` and `HttpClient`:
+To make it easier to read JSON that comes from HTTP, this library also provides a few helper extension methods on `HttpContent` and `HttpClient`:
 
 ```csharp
 using JsonExtensions.Http;
@@ -112,12 +119,12 @@ using JsonExtensions.Http;
 var httpClient = new HttpClient();
 
 // Send GET request and retrieve JSON directly
-var json = await httpClient.GetJsonAsync("...");
+var json = await httpClient.GetJsonAsync("..."); // returns JsonElement
 
 // Read JSON from content
 using var request = new HttpRequestMessage(HttpMethod.Post, "...");
 using var response = await httpClient.SendAsync(request); 
-var json = await response.Content.ReadAsJsonAsync();
+var json = await response.Content.ReadAsJsonAsync(); // returns JsonElement
 ```
 
 ### Accessing children by path
