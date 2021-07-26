@@ -4,6 +4,7 @@
 [![Coverage](https://codecov.io/gh/Tyrrrz/JsonExtensions/branch/master/graph/badge.svg)](https://codecov.io/gh/Tyrrrz/JsonExtensions)
 [![Version](https://img.shields.io/nuget/v/JsonExtensions.svg)](https://nuget.org/packages/JsonExtensions)
 [![Downloads](https://img.shields.io/nuget/dt/JsonExtensions.svg)](https://nuget.org/packages/JsonExtensions)
+[![Discord](https://img.shields.io/discord/869237470565392384?label=discord)](https://discord.gg/2SUWKFnHSm)
 [![Donate](https://img.shields.io/badge/donate-$$$-purple.svg)](https://tyrrrz.me/donate)
 
 ✅ **Project status: active**.
