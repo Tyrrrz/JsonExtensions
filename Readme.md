@@ -41,8 +41,8 @@ var jsonElement = ...;
 
 // Gets a property or returns null if:
 // - element is not an object
-// - property doesn't exist
-// - property is null
+// - property does not exist
+// - property value is null
 var maybeProperty = jsonElement.GetPropertyOrNull("prop");
 
 // Gets an array child or returns null if:
@@ -53,7 +53,7 @@ var maybeChild = jsonElement.GetByIndexOrNull(3);
 
 // Gets the value converted into specified type or returns null if:
 // - element is null
-// - element's kind doesn't match the specified type
+// - element kind does not match the specified type
 // - the value cannot be parsed into the specified type
 var maybeString = jsonElement.GetStringOrNull();
 var maybeInt32 = jsonElement.GetInt32OrNull();
@@ -61,36 +61,42 @@ var maybeGuid = jsonElement.GetGuidOrNull();
 
 // Gets the value coerced into specified type or returns null if:
 // - element is null
-// - element's kind is not string and doesn't match the specified type
+// - element kind does not match the specified type or a string
 // - the value cannot be parsed into the specified type
 var maybeInt32Coerced = jsonElement.GetInt32CoercedOrNull();
 var maybeDoubleCoerced = jsonElement.GetDoubleCoercedOrNull();
 
-// Enumerates the array/object
-// or returns null if the element is not an array/object
+// Enumerates an array or returns null if:
+// - element is not an array
 var arrayEnumerator = jsonElement.EnumerateArrayOrNull();
+
+// Enumerates an object or returns null if:
+// - element is not an object
 var objectEnumreator = jsonElement.EnumerateObjectOrNull();
 
-// Enumerates the array/object
-// or returns an empty enumerator if the element is not an array/object
+// Enumerates an array or returns an empty enumerator if:
+// - element is not an array
 foreach (var child in jsonElement.EnumerateArrayOrEmpty())
 {
     // ...
 }
 
+// Enumerates an object or returns an empty enumerator if:
+// - element is not an object
 foreach (var (name, child) in jsonElement.EnumerateObjectOrEmpty())
 {
     // ...
 }
 ```
 
-Most of these methods can be also chained together using the null-conditional operator:
+Most of these methods can also be chained together using the null-conditional operator:
 
 ```csharp
 // Returns null if:
-// - property doesn't exist
-// - property is null
-// - property's value cannot be converted into the specified type
+// - element is not an object
+// - property does not exist
+// - property value is null
+// - property value cannot be converted into the specified type
 var maybeInt32 = jsonElement.GetPropertyOrNull("prop")?.GetInt32OrNull();
 ```
 
@@ -112,7 +118,7 @@ writer.WriteBoolean("prop", new bool?());
 
 ### Parsing JSON from HTTP
 
-To make it easier to read JSON that comes from HTTP, this library also provides a few helper extension methods on `HttpContent` and `HttpClient`:
+To make it easier to read JSON that comes from HTTP responses, this library also provides a few helper extension methods on `HttpContent` and `HttpClient`:
 
 ```csharp
 using JsonExtensions.Http;
@@ -130,7 +136,7 @@ var json = await response.Content.ReadAsJsonAsync(); // returns JsonElement
 
 ### Accessing children by path
 
-Using `jsonElement.GetPropertyByPathOrNull(...)` or `jsonElement.GetPropertyByPath(...)`, you can get an inner child by specifying its path:
+Using `jsonElement.GetPropertyByPathOrNull(...)` or `jsonElement.GetPropertyByPath(...)`, you can get an inner child by its path:
 
 ```csharp
 var json = Json.Parse("{\"foo\":{\"bar\":{\"baz\":13}}}");
