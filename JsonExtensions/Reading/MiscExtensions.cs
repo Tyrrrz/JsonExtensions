@@ -8,7 +8,7 @@ namespace JsonExtensions.Reading
     public static class MiscExtensions
     {
         /// <summary>
-        /// Deconstructs <see cref="JsonProperty"/> into its name and value.
+        /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
         /// </summary>
         public static void Deconstruct(this JsonProperty property, out string name, out JsonElement value)
         {

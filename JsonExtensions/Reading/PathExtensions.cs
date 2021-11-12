@@ -36,6 +36,6 @@ namespace JsonExtensions.Reading
         /// </summary>
         public static JsonElement GetPropertyByPath(this JsonElement element, string propertyPath) =>
             element.GetPropertyByPathOrNull(propertyPath) ??
-            throw new KeyNotFoundException($"Cannot find property matching path '{propertyPath}'.");
+            throw new KeyNotFoundException($"Cannot find JSON property matching path '{propertyPath}'.");
     }
 }

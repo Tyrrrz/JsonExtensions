@@ -72,7 +72,7 @@ var arrayEnumerator = jsonElement.EnumerateArrayOrNull();
 
 // Enumerates an object or returns null if:
 // - element is not an object
-var objectEnumreator = jsonElement.EnumerateObjectOrNull();
+var objectEnumerator = jsonElement.EnumerateObjectOrNull();
 
 // Enumerates an array or returns an empty enumerator if:
 // - element is not an array
