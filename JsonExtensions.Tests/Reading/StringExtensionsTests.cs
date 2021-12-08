@@ -3,137 +3,136 @@ using FluentAssertions;
 using JsonExtensions.Reading;
 using Xunit;
 
-namespace JsonExtensions.Tests.Reading
+namespace JsonExtensions.Tests.Reading;
+
+public class StringExtensionsTests
 {
-    public class StringExtensionsTests
+    [Fact]
+    public void GetNonNullString_Positive_Test()
     {
-        [Fact]
-        public void GetNonNullString_Positive_Test()
-        {
-            // Arrange
-            var json = Json.Parse("\"foo\"");
+        // Arrange
+        var json = Json.Parse("\"foo\"");
             
-            // Act
-            var value = json.GetNonNullString();
+        // Act
+        var value = json.GetNonNullString();
             
-            // Assert
-            value.Should().Be("foo");
-        }
+        // Assert
+        value.Should().Be("foo");
+    }
 
-        [Fact]
-        public void GetNonNullString_Negative_Null_Test()
-        {
-            // Arrange
-            var json = Json.Parse("null");
+    [Fact]
+    public void GetNonNullString_Negative_Null_Test()
+    {
+        // Arrange
+        var json = Json.Parse("null");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonNullString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonNullString());
+    }
         
-        [Fact]
-        public void GetNonNullString_Negative_NotString_Test()
-        {
-            // Arrange
-            var json = Json.Parse("true");
+    [Fact]
+    public void GetNonNullString_Negative_NotString_Test()
+    {
+        // Arrange
+        var json = Json.Parse("true");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonNullString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonNullString());
+    }
         
-        [Fact]
-        public void GetNonEmptyString_Positive_Test()
-        {
-            // Arrange
-            var json = Json.Parse("\"foo\"");
+    [Fact]
+    public void GetNonEmptyString_Positive_Test()
+    {
+        // Arrange
+        var json = Json.Parse("\"foo\"");
             
-            // Act
-            var value = json.GetNonEmptyString();
+        // Act
+        var value = json.GetNonEmptyString();
             
-            // Assert
-            value.Should().Be("foo");
-        }
+        // Assert
+        value.Should().Be("foo");
+    }
 
-        [Fact]
-        public void GetNonEmptyString_Negative_Null_Test()
-        {
-            // Arrange
-            var json = Json.Parse("null");
+    [Fact]
+    public void GetNonEmptyString_Negative_Null_Test()
+    {
+        // Arrange
+        var json = Json.Parse("null");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
+    }
         
-        [Fact]
-        public void GetNonEmptyString_Negative_NotString_Test()
-        {
-            // Arrange
-            var json = Json.Parse("true");
+    [Fact]
+    public void GetNonEmptyString_Negative_NotString_Test()
+    {
+        // Arrange
+        var json = Json.Parse("true");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
+    }
         
-        [Fact]
-        public void GetNonEmptyString_Negative_EmptyString_Test()
-        {
-            // Arrange
-            var json = Json.Parse("\"\"");
+    [Fact]
+    public void GetNonEmptyString_Negative_EmptyString_Test()
+    {
+        // Arrange
+        var json = Json.Parse("\"\"");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
+    }
         
-        [Fact]
-        public void GetNonWhiteSpaceString_Positive_Test()
-        {
-            // Arrange
-            var json = Json.Parse("\"foo\"");
+    [Fact]
+    public void GetNonWhiteSpaceString_Positive_Test()
+    {
+        // Arrange
+        var json = Json.Parse("\"foo\"");
             
-            // Act
-            var value = json.GetNonWhiteSpaceString();
+        // Act
+        var value = json.GetNonWhiteSpaceString();
             
-            // Assert
-            value.Should().Be("foo");
-        }
+        // Assert
+        value.Should().Be("foo");
+    }
 
-        [Fact]
-        public void GetNonWhiteSpaceString_Negative_Null_Test()
-        {
-            // Arrange
-            var json = Json.Parse("null");
+    [Fact]
+    public void GetNonWhiteSpaceString_Negative_Null_Test()
+    {
+        // Arrange
+        var json = Json.Parse("null");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
+    }
         
-        [Fact]
-        public void GetNonWhiteSpaceString_Negative_NotString_Test()
-        {
-            // Arrange
-            var json = Json.Parse("true");
+    [Fact]
+    public void GetNonWhiteSpaceString_Negative_NotString_Test()
+    {
+        // Arrange
+        var json = Json.Parse("true");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
+    }
         
-        [Fact]
-        public void GetNonWhiteSpaceString_Negative_EmptyString_Test()
-        {
-            // Arrange
-            var json = Json.Parse("\"\"");
+    [Fact]
+    public void GetNonWhiteSpaceString_Negative_EmptyString_Test()
+    {
+        // Arrange
+        var json = Json.Parse("\"\"");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
+    }
         
-        [Fact]
-        public void GetNonWhiteSpaceString_Negative_WhiteSpaceString_Test()
-        {
-            // Arrange
-            var json = Json.Parse("\"  \"");
+    [Fact]
+    public void GetNonWhiteSpaceString_Negative_WhiteSpaceString_Test()
+    {
+        // Arrange
+        var json = Json.Parse("\"  \"");
             
-            // Act & assert
-            Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
-        }
+        // Act & assert
+        Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
     }
 }

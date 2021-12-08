@@ -1,19 +1,18 @@
 ﻿using System.Text.Json;
 
-namespace JsonExtensions.Reading
+namespace JsonExtensions.Reading;
+
+/// <summary>
+/// Miscellaneous extensions for <see cref="JsonElement"/>.
+/// </summary>
+public static class MiscExtensions
 {
     /// <summary>
-    /// Miscellaneous extensions for <see cref="JsonElement"/>.
+    /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
     /// </summary>
-    public static class MiscExtensions
+    public static void Deconstruct(this JsonProperty property, out string name, out JsonElement value)
     {
-        /// <summary>
-        /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
-        /// </summary>
-        public static void Deconstruct(this JsonProperty property, out string name, out JsonElement value)
-        {
-            name = property.Name;
-            value = property.Value;
-        }
+        name = property.Name;
+        value = property.Value;
     }
 }
