@@ -1,6 +1,6 @@
 # JsonExtensions
 
-[![Build](https://github.com/Tyrrrz/JsonExtensions/workflows/CI/badge.svg?branch=master)](https://github.com/Tyrrrz/JsonExtensions/actions)
+[![Build](https://github.com/Tyrrrz/JsonExtensions/workflows/main/badge.svg?branch=master)](https://github.com/Tyrrrz/JsonExtensions/actions)
 [![Coverage](https://codecov.io/gh/Tyrrrz/JsonExtensions/branch/master/graph/badge.svg)](https://codecov.io/gh/Tyrrrz/JsonExtensions)
 [![Version](https://img.shields.io/nuget/v/JsonExtensions.svg)](https://nuget.org/packages/JsonExtensions)
 [![Downloads](https://img.shields.io/nuget/dt/JsonExtensions.svg)](https://nuget.org/packages/JsonExtensions)
