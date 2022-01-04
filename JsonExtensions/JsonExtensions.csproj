@@ -4,6 +4,7 @@
     <TargetFrameworks>net5.0;netcoreapp3.0;netstandard2.0</TargetFrameworks>
     <Authors>$(Company)</Authors>
     <Description>Various extensions to power up System.Text.Json.</Description>
+    <IsPackable>true</IsPackable>
     <PackageTags>system.text.json system text json extensions parsing deserialization serialization</PackageTags>
     <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/blob/master/Changelog.md</PackageReleaseNotes>
