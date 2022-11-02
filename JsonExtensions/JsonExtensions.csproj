@@ -2,9 +2,12 @@
 
   <PropertyGroup>
     <TargetFrameworks>net5.0;netcoreapp3.0;netstandard2.0</TargetFrameworks>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup>
     <Authors>$(Company)</Authors>
     <Description>Various extensions to power up System.Text.Json.</Description>
-    <IsPackable>true</IsPackable>
     <PackageTags>system.text.json system text json extensions parsing deserialization serialization</PackageTags>
     <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/blob/master/Changelog.md</PackageReleaseNotes>
@@ -23,13 +26,13 @@
 
   <ItemGroup>
     <PackageReference Include="ConfigureAwait.Fody" Version="3.3.1" PrivateAssets="all" />
-    <PackageReference Include="Fody" Version="6.6.0" PrivateAssets="all" />
+    <PackageReference Include="Fody" Version="6.6.4" PrivateAssets="all" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="all" />
-    <PackageReference Include="Nullable" Version="1.3.0" PrivateAssets="all" />
+    <PackageReference Include="Nullable" Version="1.3.1" PrivateAssets="all" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.Text.Json" Version="6.0.0" />
+    <PackageReference Include="System.Text.Json" Version="6.0.6" />
   </ItemGroup>
 
 </Project>
