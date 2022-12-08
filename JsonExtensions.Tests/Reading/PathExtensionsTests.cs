@@ -11,7 +11,12 @@ public class PathExtensionsTests
     public void GetPropertyByPath_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":{"bar":{"baz":13}}}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":{"bar":{"baz":13}}}
+            """
+        );
 
         // Act
         var child = json.GetPropertyByPath("foo.bar.baz");
@@ -24,7 +29,12 @@ public class PathExtensionsTests
     public void GetPropertyByPath_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":{"bar":{"baz":13}}}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":{"bar":{"baz":13}}}
+            """
+        );
 
         // Act & assert
         Assert.Throws<KeyNotFoundException>(() =>

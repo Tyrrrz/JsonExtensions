@@ -11,7 +11,10 @@ public class CoercionExtensionsTests
     public void GetBooleanCoerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetBooleanCoerced();
@@ -24,7 +27,10 @@ public class CoercionExtensionsTests
     public void GetBooleanCoerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"true\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"true\""
+        );
 
         // Act
         var value = json.GetBooleanCoerced();
@@ -37,7 +43,10 @@ public class CoercionExtensionsTests
     public void GetBooleanCoerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetBooleanCoerced());
@@ -47,7 +56,10 @@ public class CoercionExtensionsTests
     public void GetByteCoerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetByteCoerced();
@@ -60,7 +72,10 @@ public class CoercionExtensionsTests
     public void GetByteCoerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetByteCoerced();
@@ -73,7 +88,10 @@ public class CoercionExtensionsTests
     public void GetByteCoerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetByteCoerced());
@@ -83,7 +101,10 @@ public class CoercionExtensionsTests
     public void GetDecimalCoerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetDecimalCoerced();
@@ -96,7 +117,10 @@ public class CoercionExtensionsTests
     public void GetDecimalCoerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetDecimalCoerced();
@@ -109,7 +133,10 @@ public class CoercionExtensionsTests
     public void GetDecimalCoerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetDecimalCoerced());
@@ -119,7 +146,10 @@ public class CoercionExtensionsTests
     public void GetDoubleCoerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13.11");
+        var json = Json.Parse(
+            // language=JSON
+            "13.11"
+        );
 
         // Act
         var value = json.GetDoubleCoerced();
@@ -132,7 +162,10 @@ public class CoercionExtensionsTests
     public void GetDoubleCoerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13.11\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13.11\""
+        );
 
         // Act
         var value = json.GetDoubleCoerced();
@@ -145,7 +178,10 @@ public class CoercionExtensionsTests
     public void GetDoubleCoerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetDoubleCoerced());
@@ -155,7 +191,10 @@ public class CoercionExtensionsTests
     public void GetSingleCoerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13.11");
+        var json = Json.Parse(
+            // language=JSON
+            "13.11"
+        );
 
         // Act
         var value = json.GetSingleCoerced();
@@ -168,7 +207,10 @@ public class CoercionExtensionsTests
     public void GetSingleCoerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13.11\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13.11\""
+        );
 
         // Act
         var value = json.GetSingleCoerced();
@@ -181,7 +223,10 @@ public class CoercionExtensionsTests
     public void GetSingleCoerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetSingleCoerced());
@@ -191,7 +236,10 @@ public class CoercionExtensionsTests
     public void GetInt16Coerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetInt16Coerced();
@@ -204,7 +252,10 @@ public class CoercionExtensionsTests
     public void GetInt16Coerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetInt16Coerced();
@@ -217,7 +268,10 @@ public class CoercionExtensionsTests
     public void GetInt16Coerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetInt16Coerced());
@@ -227,7 +281,10 @@ public class CoercionExtensionsTests
     public void GetInt32Coerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetInt32Coerced();
@@ -240,7 +297,10 @@ public class CoercionExtensionsTests
     public void GetInt32Coerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetInt32Coerced();
@@ -253,7 +313,10 @@ public class CoercionExtensionsTests
     public void GetInt32Coerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetInt32Coerced());
@@ -263,7 +326,10 @@ public class CoercionExtensionsTests
     public void GetInt64Coerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetInt64Coerced();
@@ -276,7 +342,10 @@ public class CoercionExtensionsTests
     public void GetInt64Coerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetInt64Coerced();
@@ -289,7 +358,10 @@ public class CoercionExtensionsTests
     public void GetInt64Coerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetInt64Coerced());
@@ -299,7 +371,10 @@ public class CoercionExtensionsTests
     public void GetSByteCoerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetSByteCoerced();
@@ -312,7 +387,10 @@ public class CoercionExtensionsTests
     public void GetSByteCoerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetSByteCoerced();
@@ -325,7 +403,10 @@ public class CoercionExtensionsTests
     public void GetSByteCoerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetSByteCoerced());
@@ -335,7 +416,10 @@ public class CoercionExtensionsTests
     public void GetUInt16Coerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetUInt16Coerced();
@@ -348,7 +432,10 @@ public class CoercionExtensionsTests
     public void GetUInt16Coerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetUInt16Coerced();
@@ -361,7 +448,10 @@ public class CoercionExtensionsTests
     public void GetUInt16Coerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetUInt16Coerced());
@@ -371,7 +461,10 @@ public class CoercionExtensionsTests
     public void GetUInt32Coerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetUInt32Coerced();
@@ -384,7 +477,10 @@ public class CoercionExtensionsTests
     public void GetUInt32Coerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetUInt32Coerced();
@@ -397,7 +493,10 @@ public class CoercionExtensionsTests
     public void GetUInt32Coerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetUInt32Coerced());
@@ -407,7 +506,10 @@ public class CoercionExtensionsTests
     public void GetUInt64Coerced_Positive_Direct_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetUInt64Coerced();
@@ -420,7 +522,10 @@ public class CoercionExtensionsTests
     public void GetUInt64Coerced_Positive_FromString_Test()
     {
         // Arrange
-        var json = Json.Parse("\"13\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"13\""
+        );
 
         // Act
         var value = json.GetUInt64Coerced();
@@ -433,7 +538,10 @@ public class CoercionExtensionsTests
     public void GetUInt64Coerced_Negative_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetUInt64Coerced());

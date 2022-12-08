@@ -8,11 +8,13 @@ public class JsonTests
     [Fact]
     public void Parse_Test()
     {
-        // Arrange
-        const string jsonRaw = """{"foo":"bar"}""";
-
         // Act
-        var json = Json.Parse(jsonRaw);
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":"bar"}
+            """
+        );
 
         // Assert
         json.GetProperty("foo").GetString().Should().Be("bar");
@@ -21,11 +23,13 @@ public class JsonTests
     [Fact]
     public void TryParse_Positive_Test()
     {
-        // Arrange
-        const string jsonRaw = """{"foo":"bar"}""";
-
         // Act
-        var json = Json.TryParse(jsonRaw);
+        var json = Json.TryParse(
+            // language=JSON
+            """
+            {"foo":"bar"}
+            """
+        );
 
         // Assert
         json.Should().NotBeNull();
@@ -35,11 +39,12 @@ public class JsonTests
     [Fact]
     public void TryParse_Negative_Test()
     {
-        // Arrange
-        const string jsonRaw = """{"foo":bar}""";
-
         // Act
-        var json = Json.TryParse(jsonRaw);
+        var json = Json.TryParse(
+            """
+            {"foo":bar}
+            """
+        );
 
         // Assert
         json.Should().BeNull();

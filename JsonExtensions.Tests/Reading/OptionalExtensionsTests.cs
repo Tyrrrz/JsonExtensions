@@ -14,7 +14,12 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":13}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":13}
+            """
+        );
 
         // Act
         var child = json.GetPropertyOrNull("foo");
@@ -28,7 +33,12 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Negative_Undefined_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":13}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":13}
+            """
+        );
 
         // Act
         var child = json.GetPropertyOrNull("bar");
@@ -41,7 +51,12 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":null}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":null}
+            """
+        );
 
         // Act
         var child = json.GetPropertyOrNull("foo");
@@ -54,7 +69,10 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Negative_NotObject_Test()
     {
         // Arrange
-        var json = Json.Parse("[1,2,3]");
+        var json = Json.Parse(
+            // language=JSON
+            "[1,2,3]"
+        );
 
         // Act
         var child = json.GetPropertyOrNull("foo");
@@ -67,7 +85,10 @@ public class OptionalExtensionsTests
     public void GetByIndexOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("[1,2,3]");
+        var json = Json.Parse(
+            // language=JSON
+            "[1,2,3]"
+        );
 
         // Act
         var child = json.GetByIndexOrNull(1);
@@ -81,7 +102,10 @@ public class OptionalExtensionsTests
     public void GetByIndexOrNull_Negative_OutOfBounds_Test()
     {
         // Arrange
-        var json = Json.Parse("[1,2,3]");
+        var json = Json.Parse(
+            // language=JSON
+            "[1,2,3]"
+        );
 
         // Act
         var child = json.GetByIndexOrNull(5);
@@ -94,7 +118,10 @@ public class OptionalExtensionsTests
     public void GetByIndexOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("[1,null,3]");
+        var json = Json.Parse(
+            // language=JSON
+            "[1,null,3]"
+        );
 
         // Act
         var child = json.GetByIndexOrNull(1);
@@ -107,7 +134,12 @@ public class OptionalExtensionsTests
     public void GetByIndexOrNull_Negative_NotArray_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":null}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":null}
+            """
+        );
 
         // Act
         var child = json.GetByIndexOrNull(1);
@@ -120,7 +152,10 @@ public class OptionalExtensionsTests
     public void EnumerateArrayOrEmpty_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("[1,2,3]");
+        var json = Json.Parse(
+            // language=JSON
+            "[1,2,3]"
+        );
 
         // Act
         var count = json.EnumerateArrayOrEmpty().Count();
@@ -133,7 +168,12 @@ public class OptionalExtensionsTests
     public void EnumerateArrayOrEmpty_Negative_NotArray_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":null}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":null}
+            """
+        );
 
         // Act
         var count = json.EnumerateArrayOrEmpty().Count();
@@ -146,7 +186,12 @@ public class OptionalExtensionsTests
     public void EnumerateObjectOrEmpty_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("""{"foo":1,"bar":true}""");
+        var json = Json.Parse(
+            // language=JSON
+            """
+            {"foo":1,"bar":true}
+            """
+        );
 
         // Act
         var count = json.EnumerateObjectOrEmpty().Count();
@@ -159,7 +204,10 @@ public class OptionalExtensionsTests
     public void EnumerateObjectOrEmpty_Negative_NotObject_Test()
     {
         // Arrange
-        var json = Json.Parse("[1,2,3]");
+        var json = Json.Parse(
+            // language=JSON
+            "[1,2,3]"
+        );
 
         // Act
         var count = json.EnumerateObjectOrEmpty().Count();
@@ -172,7 +220,10 @@ public class OptionalExtensionsTests
     public void GetBooleanOrNull_Positive_True_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetBooleanOrNull();
@@ -185,7 +236,10 @@ public class OptionalExtensionsTests
     public void GetBooleanOrNull_Positive_False_Test()
     {
         // Arrange
-        var json = Json.Parse("false");
+        var json = Json.Parse(
+            // language=JSON
+            "false"
+        );
 
         // Act
         var value = json.GetBooleanOrNull();
@@ -198,7 +252,10 @@ public class OptionalExtensionsTests
     public void GetBooleanOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetBooleanOrNull();
@@ -211,7 +268,10 @@ public class OptionalExtensionsTests
     public void GetBooleanOrNull_Negative_NotBoolean_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetBooleanOrNull();
@@ -224,7 +284,10 @@ public class OptionalExtensionsTests
     public void GetByteOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetByteOrNull();
@@ -237,7 +300,10 @@ public class OptionalExtensionsTests
     public void GetByteOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetByteOrNull();
@@ -250,7 +316,10 @@ public class OptionalExtensionsTests
     public void GetByteOrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetByteOrNull();
@@ -263,7 +332,10 @@ public class OptionalExtensionsTests
     public void GetByteOrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetByteOrNull();
@@ -276,7 +348,10 @@ public class OptionalExtensionsTests
     public void GetDecimalOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetDecimalOrNull();
@@ -289,7 +364,10 @@ public class OptionalExtensionsTests
     public void GetDecimalOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetDecimalOrNull();
@@ -302,7 +380,10 @@ public class OptionalExtensionsTests
     public void GetDecimalOrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetDecimalOrNull();
@@ -315,7 +396,10 @@ public class OptionalExtensionsTests
     public void GetDecimalOrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("99999999999999999999999999999999999");
+        var json = Json.Parse(
+            // language=JSON
+            "99999999999999999999999999999999999"
+        );
 
         // Act
         var value = json.GetDecimalOrNull();
@@ -328,7 +412,10 @@ public class OptionalExtensionsTests
     public void GetDoubleOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13.11");
+        var json = Json.Parse(
+            // language=JSON
+            "13.11"
+        );
 
         // Act
         var value = json.GetDoubleOrNull();
@@ -341,7 +428,10 @@ public class OptionalExtensionsTests
     public void GetDoubleOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetDoubleOrNull();
@@ -354,7 +444,10 @@ public class OptionalExtensionsTests
     public void GetDoubleOrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetDoubleOrNull();
@@ -367,7 +460,10 @@ public class OptionalExtensionsTests
     public void GetSingleOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13.11");
+        var json = Json.Parse(
+            // language=JSON
+            "13.11"
+        );
 
         // Act
         var value = json.GetSingleOrNull();
@@ -380,7 +476,10 @@ public class OptionalExtensionsTests
     public void GetSingleOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetSingleOrNull();
@@ -393,7 +492,10 @@ public class OptionalExtensionsTests
     public void GetSingleOrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetSingleOrNull();
@@ -406,7 +508,10 @@ public class OptionalExtensionsTests
     public void GetInt16OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetInt16OrNull();
@@ -419,7 +524,10 @@ public class OptionalExtensionsTests
     public void GetInt16OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetInt16OrNull();
@@ -432,7 +540,10 @@ public class OptionalExtensionsTests
     public void GetInt16OrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetInt16OrNull();
@@ -445,7 +556,10 @@ public class OptionalExtensionsTests
     public void GetInt16OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetInt16OrNull();
@@ -458,7 +572,10 @@ public class OptionalExtensionsTests
     public void GetInt32OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetInt32OrNull();
@@ -471,7 +588,10 @@ public class OptionalExtensionsTests
     public void GetInt32OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetInt32OrNull();
@@ -484,7 +604,10 @@ public class OptionalExtensionsTests
     public void GetInt32OrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetInt32OrNull();
@@ -497,7 +620,10 @@ public class OptionalExtensionsTests
     public void GetInt32OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetInt32OrNull();
@@ -510,7 +636,10 @@ public class OptionalExtensionsTests
     public void GetInt64OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetInt64OrNull();
@@ -523,7 +652,10 @@ public class OptionalExtensionsTests
     public void GetInt64OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetInt64OrNull();
@@ -536,7 +668,10 @@ public class OptionalExtensionsTests
     public void GetInt64OrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetInt64OrNull();
@@ -549,7 +684,10 @@ public class OptionalExtensionsTests
     public void GetInt64OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetInt64OrNull();
@@ -562,7 +700,10 @@ public class OptionalExtensionsTests
     public void GetSByteOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetSByteOrNull();
@@ -575,7 +716,10 @@ public class OptionalExtensionsTests
     public void GetSByteOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetSByteOrNull();
@@ -588,7 +732,10 @@ public class OptionalExtensionsTests
     public void GetSByteOrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetSByteOrNull();
@@ -601,7 +748,10 @@ public class OptionalExtensionsTests
     public void GetSByteOrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetSByteOrNull();
@@ -614,7 +764,10 @@ public class OptionalExtensionsTests
     public void GetUInt16OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetUInt16OrNull();
@@ -627,7 +780,10 @@ public class OptionalExtensionsTests
     public void GetUInt16OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetUInt16OrNull();
@@ -640,7 +796,10 @@ public class OptionalExtensionsTests
     public void GetUInt16OrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetUInt16OrNull();
@@ -653,7 +812,10 @@ public class OptionalExtensionsTests
     public void GetUInt16OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetUInt16OrNull();
@@ -666,7 +828,10 @@ public class OptionalExtensionsTests
     public void GetUInt32OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetUInt32OrNull();
@@ -679,7 +844,10 @@ public class OptionalExtensionsTests
     public void GetUInt32OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetUInt32OrNull();
@@ -692,7 +860,10 @@ public class OptionalExtensionsTests
     public void GetUInt32OrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetUInt32OrNull();
@@ -705,7 +876,10 @@ public class OptionalExtensionsTests
     public void GetUInt32OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetUInt32OrNull();
@@ -718,7 +892,10 @@ public class OptionalExtensionsTests
     public void GetUInt64OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("13");
+        var json = Json.Parse(
+            // language=JSON
+            "13"
+        );
 
         // Act
         var value = json.GetUInt64OrNull();
@@ -731,7 +908,10 @@ public class OptionalExtensionsTests
     public void GetUInt64OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetUInt64OrNull();
@@ -744,7 +924,10 @@ public class OptionalExtensionsTests
     public void GetUInt64OrNull_Negative_NotNumber_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetUInt64OrNull();
@@ -757,7 +940,10 @@ public class OptionalExtensionsTests
     public void GetUInt64OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("3.14");
+        var json = Json.Parse(
+            // language=JSON
+            "3.14"
+        );
 
         // Act
         var value = json.GetUInt64OrNull();
@@ -770,7 +956,10 @@ public class OptionalExtensionsTests
     public void GetStringOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("\"foo\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"foo\""
+        );
 
         // Act
         var value = json.GetStringOrNull();
@@ -783,7 +972,10 @@ public class OptionalExtensionsTests
     public void GetStringOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetStringOrNull();
@@ -796,7 +988,10 @@ public class OptionalExtensionsTests
     public void GetStringOrNull_Negative_NotString_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetStringOrNull();
@@ -809,7 +1004,10 @@ public class OptionalExtensionsTests
     public void GetGuidOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("\"b2567a71-6966-49b1-8976-ad3f4e397b05\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"b2567a71-6966-49b1-8976-ad3f4e397b05\""
+        );
 
         // Act
         var value = json.GetGuidOrNull();
@@ -822,7 +1020,10 @@ public class OptionalExtensionsTests
     public void GetGuidOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetGuidOrNull();
@@ -835,7 +1036,10 @@ public class OptionalExtensionsTests
     public void GetGuidOrNull_Negative_NotString_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetGuidOrNull();
@@ -848,7 +1052,10 @@ public class OptionalExtensionsTests
     public void GetGuidOrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("\"foo\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"foo\""
+        );
 
         // Act
         var value = json.GetGuidOrNull();
@@ -861,7 +1068,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("\"2014-01-01T23:28:56.782Z\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"2014-01-01T23:28:56.782Z\""
+        );
 
         // Act
         var value = json.GetDateTimeOrNull();
@@ -879,7 +1089,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetDateTimeOrNull();
@@ -892,7 +1105,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOrNull_Negative_NotString_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetDateTimeOrNull();
@@ -905,7 +1121,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("\"foo\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"foo\""
+        );
 
         // Act
         var value = json.GetDateTimeOrNull();
@@ -918,7 +1137,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOffsetOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("\"2014-01-01T23:28:56.782Z\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"2014-01-01T23:28:56.782Z\""
+        );
 
         // Act
         var value = json.GetDateTimeOffsetOrNull();
@@ -935,7 +1157,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOffsetOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetDateTimeOffsetOrNull();
@@ -948,7 +1173,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOffsetOrNull_Negative_NotString_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetDateTimeOffsetOrNull();
@@ -961,7 +1189,10 @@ public class OptionalExtensionsTests
     public void GetDateTimeOffsetOrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("\"foo\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"foo\""
+        );
 
         // Act
         var value = json.GetDateTimeOffsetOrNull();
@@ -974,7 +1205,10 @@ public class OptionalExtensionsTests
     public void GetBytesFromBase64OrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("\"Zm9v\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"Zm9v\""
+        );
 
         // Act
         var value = json.GetBytesFromBase64OrNull();
@@ -987,7 +1221,10 @@ public class OptionalExtensionsTests
     public void GetBytesFromBase64OrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("null");
+        var json = Json.Parse(
+            // language=JSON
+            "null"
+        );
 
         // Act
         var value = json.GetBytesFromBase64OrNull();
@@ -1000,7 +1237,10 @@ public class OptionalExtensionsTests
     public void GetBytesFromBase64OrNull_Negative_NotString_Test()
     {
         // Arrange
-        var json = Json.Parse("true");
+        var json = Json.Parse(
+            // language=JSON
+            "true"
+        );
 
         // Act
         var value = json.GetBytesFromBase64OrNull();
@@ -1013,7 +1253,10 @@ public class OptionalExtensionsTests
     public void GetBytesFromBase64OrNull_Negative_NotConvertible_Test()
     {
         // Arrange
-        var json = Json.Parse("\"foo\"");
+        var json = Json.Parse(
+            // language=JSON
+            "\"foo\""
+        );
 
         // Act
         var value = json.GetBytesFromBase64OrNull();
