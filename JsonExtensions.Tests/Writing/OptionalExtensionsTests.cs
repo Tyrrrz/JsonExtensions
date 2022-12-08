@@ -20,7 +20,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":true}");
+        context.GetString().Should().Be("""{"foo":true}""");
     }
 
     [Fact]
@@ -35,7 +35,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -50,7 +50,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -65,7 +65,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -80,7 +80,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -95,7 +95,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -110,7 +110,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -125,7 +125,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -140,7 +140,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -155,7 +155,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -170,7 +170,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -185,7 +185,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -200,7 +200,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -215,7 +215,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -230,7 +230,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -245,7 +245,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -260,7 +260,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -275,7 +275,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -290,7 +290,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -305,7 +305,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -320,7 +320,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -335,7 +335,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -350,7 +350,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":13}");
+        context.GetString().Should().Be("""{"foo":13}""");
     }
 
     [Fact]
@@ -365,7 +365,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -380,7 +380,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":\"00000000-0000-0000-0000-000000000000\"}");
+        context.GetString().Should().Be("""{"foo":"00000000-0000-0000-0000-000000000000"}""");
     }
 
     [Fact]
@@ -395,7 +395,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -410,7 +410,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":\"1970-01-01T00:00:00Z\"}");
+        context.GetString().Should().Be("""{"foo":"1970-01-01T00:00:00Z"}""");
     }
 
     [Fact]
@@ -425,7 +425,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 
     [Fact]
@@ -440,7 +440,7 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":\"1970-01-01T00:00:00+00:00\"}");
+        context.GetString().Should().Be("""{"foo":"1970-01-01T00:00:00+00:00"}""");
     }
 
     [Fact]
@@ -455,6 +455,6 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be("{\"foo\":null}");
+        context.GetString().Should().Be("""{"foo":null}""");
     }
 }

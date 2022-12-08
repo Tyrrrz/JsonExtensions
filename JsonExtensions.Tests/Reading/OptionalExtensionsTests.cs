@@ -14,7 +14,7 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("{\"foo\":13}");
+        var json = Json.Parse("""{"foo":13}""");
 
         // Act
         var child = json.GetPropertyOrNull("foo");
@@ -28,7 +28,7 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Negative_Undefined_Test()
     {
         // Arrange
-        var json = Json.Parse("{\"foo\":13}");
+        var json = Json.Parse("""{"foo":13}""");
 
         // Act
         var child = json.GetPropertyOrNull("bar");
@@ -41,7 +41,7 @@ public class OptionalExtensionsTests
     public void GetPropertyOrNull_Negative_Null_Test()
     {
         // Arrange
-        var json = Json.Parse("{\"foo\":null}");
+        var json = Json.Parse("""{"foo":null}""");
 
         // Act
         var child = json.GetPropertyOrNull("foo");
@@ -107,7 +107,7 @@ public class OptionalExtensionsTests
     public void GetByIndexOrNull_Negative_NotArray_Test()
     {
         // Arrange
-        var json = Json.Parse("{\"foo\":null}");
+        var json = Json.Parse("""{"foo":null}""");
 
         // Act
         var child = json.GetByIndexOrNull(1);
@@ -133,7 +133,7 @@ public class OptionalExtensionsTests
     public void EnumerateArrayOrEmpty_Negative_NotArray_Test()
     {
         // Arrange
-        var json = Json.Parse("{\"foo\":null}");
+        var json = Json.Parse("""{"foo":null}""");
 
         // Act
         var count = json.EnumerateArrayOrEmpty().Count();
@@ -146,7 +146,7 @@ public class OptionalExtensionsTests
     public void EnumerateObjectOrEmpty_Positive_Test()
     {
         // Arrange
-        var json = Json.Parse("{\"foo\":1,\"bar\":true}");
+        var json = Json.Parse("""{"foo":1,"bar":true}""");
 
         // Act
         var count = json.EnumerateObjectOrEmpty().Count();

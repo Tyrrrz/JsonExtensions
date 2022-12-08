@@ -9,7 +9,7 @@ public class JsonTests
     public void Parse_Test()
     {
         // Arrange
-        const string jsonRaw = "{\"foo\":\"bar\"}";
+        const string jsonRaw = """{"foo":"bar"}""";
 
         // Act
         var json = Json.Parse(jsonRaw);
@@ -22,7 +22,7 @@ public class JsonTests
     public void TryParse_Positive_Test()
     {
         // Arrange
-        const string jsonRaw = "{\"foo\":\"bar\"}";
+        const string jsonRaw = """{"foo":"bar"}""";
 
         // Act
         var json = Json.TryParse(jsonRaw);
@@ -36,7 +36,7 @@ public class JsonTests
     public void TryParse_Negative_Test()
     {
         // Arrange
-        const string jsonRaw = "{\"foo\":bar}";
+        const string jsonRaw = """{"foo":bar}""";
 
         // Act
         var json = Json.TryParse(jsonRaw);
