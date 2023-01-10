@@ -1,6 +1,6 @@
 # JsonExtensions
 
-[![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7)](https://vshymanskyy.github.io/StandWithUkraine)
+[![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7)](https://tyrrrz.me/ukraine)
 [![Build](https://img.shields.io/github/actions/workflow/status/Tyrrrz/JsonExtensions/main.yml?branch=master)](https://github.com/Tyrrrz/JsonExtensions/actions)
 [![Coverage](https://img.shields.io/codecov/c/github/Tyrrrz/JsonExtensions/master)](https://codecov.io/gh/Tyrrrz/JsonExtensions)
 [![Version](https://img.shields.io/nuget/v/JsonExtensions.svg)](https://nuget.org/packages/JsonExtensions)
@@ -143,7 +143,7 @@ var json = await httpClient.GetJsonAsync("..."); // returns JsonElement
 
 // Read JSON from content
 using var request = new HttpRequestMessage(HttpMethod.Post, "...");
-using var response = await httpClient.SendAsync(request); 
+using var response = await httpClient.SendAsync(request);
 var json = await response.Content.ReadAsJsonAsync(); // returns JsonElement
 ```
 
