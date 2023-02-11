@@ -12,10 +12,10 @@ public class HttpExtensionsTests
     public async Task GetJsonAsync_Test()
     {
         // Arrange
-        using var httpClient = new HttpClient();
+        using var http = new HttpClient();
 
         // Act
-        var json = await httpClient.GetJsonAsync("https://jsonplaceholder.typicode.com/todos/1");
+        var json = await http.GetJsonAsync("https://jsonplaceholder.typicode.com/todos/1");
 
         // Assert
         json.GetProperty("userId").GetInt32().Should().Be(1);

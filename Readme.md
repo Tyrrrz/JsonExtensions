@@ -136,14 +136,14 @@ To make it easier to read JSON that comes from HTTP responses, this library also
 ```csharp
 using JsonExtensions.Http;
 
-var httpClient = new HttpClient();
+var http = new HttpClient();
 
 // Send GET request and retrieve JSON directly
-var json = await httpClient.GetJsonAsync("..."); // returns JsonElement
+var json = await http.GetJsonAsync("..."); // returns JsonElement
 
 // Read JSON from content
 using var request = new HttpRequestMessage(HttpMethod.Post, "...");
-using var response = await httpClient.SendAsync(request);
+using var response = await http.SendAsync(request);
 var json = await response.Content.ReadAsJsonAsync(); // returns JsonElement
 ```
 

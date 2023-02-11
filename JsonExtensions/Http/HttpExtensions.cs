@@ -15,10 +15,10 @@ public static class HttpExtensions
     /// Reads the content as JSON.
     /// </summary>
     public static async Task<JsonElement> ReadAsJsonAsync(
-        this HttpContent httpContent,
+        this HttpContent content,
         CancellationToken cancellationToken = default)
     {
-        using var stream = await httpContent.ReadAsStreamAsync(cancellationToken);
+        using var stream = await content.ReadAsStreamAsync(cancellationToken);
         using var document = await JsonDocument.ParseAsync(stream, default, cancellationToken);
 
         return document.RootElement.Clone();
@@ -28,11 +28,11 @@ public static class HttpExtensions
     /// Sends a GET request and reads the response content as JSON.
     /// </summary>
     public static async Task<JsonElement> GetJsonAsync(
-        this HttpClient httpClient,
+        this HttpClient http,
         Uri requestUri,
         CancellationToken cancellationToken = default)
     {
-        using var response = await httpClient.GetAsync(
+        using var response = await http.GetAsync(
             requestUri,
             HttpCompletionOption.ResponseHeadersRead,
             cancellationToken
@@ -47,8 +47,8 @@ public static class HttpExtensions
     /// Sends a GET request and reads the response content as JSON.
     /// </summary>
     public static async Task<JsonElement> GetJsonAsync(
-        this HttpClient httpClient,
+        this HttpClient http,
         string requestUri,
         CancellationToken cancellationToken = default) =>
-        await httpClient.GetJsonAsync(new Uri(requestUri, UriKind.RelativeOrAbsolute), cancellationToken);
+        await http.GetJsonAsync(new Uri(requestUri, UriKind.RelativeOrAbsolute), cancellationToken);
 }
