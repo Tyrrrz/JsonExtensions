@@ -22,7 +22,7 @@ By using this project or its source code, for any purpose and in any shape or fo
 - You **support Ukraine's territorial integrity, including its claims over temporarily occupied territories of Crimea and Donbas**
 - You **reject false narratives perpetuated by Russian state propaganda**
 
-To learn more about the war and how you can help, [click here](https://tyrrrz.me). Glory to Ukraine! 🇺🇦
+To learn more about the war and how you can help, [click here](https://tyrrrz.me/ukraine). Glory to Ukraine! 🇺🇦
 
 ## Install
 
@@ -32,7 +32,7 @@ To learn more about the war and how you can help, [click here](https://tyrrrz.me
 
 ### Parsing JsonElement
 
-You can use the static methods on `Json` class to parse JSON directly into a stateless `JsonElement` instance, without having to deal with `JsonDocument` in the process:
+You can use the static methods on the `Json` class to parse JSON directly into a stateless `JsonElement` instance, without having to deal with `JsonDocument` in the process:
 
 ```csharp
 using JsonExtensions;
@@ -45,7 +45,7 @@ var jsonElement = Json.TryParse(jsonRaw); // returns null in case of invalid JSO
 
 ### Null-safe reading
 
-This library offers many extension methods for `JsonElement` that allow you to read content in a more fault-tolerant way:
+This library offers many extension methods for `JsonElement` that allow you to read its content in a more fault-tolerant way:
 
 ```csharp
 using JsonExtensions.Reading;
@@ -64,7 +64,7 @@ var maybeProperty = jsonElement.GetPropertyOrNull("prop");
 // - child is null
 var maybeChild = jsonElement.GetByIndexOrNull(3);
 
-// Gets the value converted into specified type or returns null if:
+// Gets the value converted into the specified type or returns null if:
 // - element is null
 // - element kind does not match the specified type
 // - the value cannot be parsed into the specified type
@@ -72,7 +72,7 @@ var maybeString = jsonElement.GetStringOrNull();
 var maybeInt32 = jsonElement.GetInt32OrNull();
 var maybeGuid = jsonElement.GetGuidOrNull();
 
-// Gets the value coerced into specified type or returns null if:
+// Gets the value coerced into the specified type or returns null if:
 // - element is null
 // - element kind does not match the specified type or a string
 // - the value cannot be parsed into the specified type
@@ -131,14 +131,14 @@ writer.WriteBoolean("prop", new bool?());
 
 ### Parsing JSON from HTTP
 
-To make it easier to read JSON that comes from HTTP responses, this library also provides a few helper extension methods on `HttpContent` and `HttpClient`:
+To make it easier to read JSON that comes from HTTP responses, this library also provides a few extension methods for `HttpContent` and `HttpClient`:
 
 ```csharp
 using JsonExtensions.Http;
 
 var http = new HttpClient();
 
-// Send GET request and retrieve JSON directly
+// Send a GET request and retrieve JSON directly
 var json = await http.GetJsonAsync("..."); // returns JsonElement
 
 // Read JSON from content
