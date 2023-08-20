@@ -12,7 +12,7 @@ public class PathExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":{"bar":{"baz":13}}}
             """
@@ -30,7 +30,7 @@ public class PathExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":{"bar":{"baz":13}}}
             """

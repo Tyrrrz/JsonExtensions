@@ -21,7 +21,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":true}
             """
@@ -41,7 +41,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -61,7 +61,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -81,7 +81,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -101,7 +101,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -121,7 +121,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -141,7 +141,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -161,7 +161,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -181,7 +181,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -201,7 +201,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -221,7 +221,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -241,7 +241,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -261,7 +261,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -281,7 +281,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -301,7 +301,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -321,7 +321,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -341,7 +341,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -361,7 +361,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -381,7 +381,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -401,7 +401,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -421,7 +421,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -441,7 +441,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -461,7 +461,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -481,7 +481,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -501,7 +501,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":"00000000-0000-0000-0000-000000000000"}
             """
@@ -521,7 +521,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -541,7 +541,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":"1970-01-01T00:00:00Z"}
             """
@@ -561,7 +561,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -581,7 +581,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":"1970-01-01T00:00:00+00:00"}
             """
@@ -601,7 +601,7 @@ public class OptionalExtensionsTests
 
         // Assert
         context.GetString().Should().Be(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """

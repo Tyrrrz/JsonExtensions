@@ -12,7 +12,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -28,7 +28,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"true\""
         );
 
@@ -44,7 +44,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -57,7 +57,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -73,7 +73,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -89,7 +89,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -102,7 +102,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -118,7 +118,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -134,7 +134,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -147,7 +147,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13.11"
         );
 
@@ -163,7 +163,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13.11\""
         );
 
@@ -179,7 +179,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -192,7 +192,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13.11"
         );
 
@@ -208,7 +208,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13.11\""
         );
 
@@ -224,7 +224,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -237,7 +237,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -253,7 +253,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -269,7 +269,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -282,7 +282,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -298,7 +298,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -314,7 +314,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -327,7 +327,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -343,7 +343,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -359,7 +359,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -372,7 +372,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -388,7 +388,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -404,7 +404,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -417,7 +417,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -433,7 +433,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -449,7 +449,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -462,7 +462,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -478,7 +478,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -494,7 +494,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -507,7 +507,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -523,7 +523,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"13\""
         );
 
@@ -539,7 +539,7 @@ public class CoercionExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 

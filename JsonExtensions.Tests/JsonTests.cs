@@ -10,7 +10,7 @@ public class JsonTests
     {
         // Act
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":"bar"}
             """
@@ -25,7 +25,7 @@ public class JsonTests
     {
         // Act
         var json = Json.TryParse(
-            // language=JSON
+            // lang=json
             """
             {"foo":"bar"}
             """

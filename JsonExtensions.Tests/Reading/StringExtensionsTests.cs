@@ -12,7 +12,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
             
@@ -28,7 +28,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
             
@@ -41,7 +41,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
             
@@ -54,7 +54,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
             
@@ -70,7 +70,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
             
@@ -83,7 +83,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
             
@@ -96,7 +96,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"\""
         );
             
@@ -109,7 +109,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
             
@@ -125,7 +125,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
             
@@ -138,7 +138,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
             
@@ -151,7 +151,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"\""
         );
             
@@ -164,7 +164,7 @@ public class StringExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"  \""
         );
             

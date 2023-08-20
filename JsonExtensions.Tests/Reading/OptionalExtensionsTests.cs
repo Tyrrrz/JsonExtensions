@@ -15,7 +15,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -34,7 +34,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":13}
             """
@@ -52,7 +52,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -70,7 +70,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "[1,2,3]"
         );
 
@@ -86,7 +86,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "[1,2,3]"
         );
 
@@ -103,7 +103,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "[1,2,3]"
         );
 
@@ -119,7 +119,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "[1,null,3]"
         );
 
@@ -135,7 +135,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -153,7 +153,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "[1,2,3]"
         );
 
@@ -169,7 +169,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":null}
             """
@@ -187,7 +187,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             """
             {"foo":1,"bar":true}
             """
@@ -205,7 +205,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "[1,2,3]"
         );
 
@@ -221,7 +221,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -237,7 +237,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "false"
         );
 
@@ -253,7 +253,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -269,7 +269,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -285,7 +285,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -301,7 +301,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -317,7 +317,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -333,7 +333,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -349,7 +349,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -365,7 +365,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -381,7 +381,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -397,7 +397,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "99999999999999999999999999999999999"
         );
 
@@ -413,7 +413,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13.11"
         );
 
@@ -429,7 +429,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -445,7 +445,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -461,7 +461,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13.11"
         );
 
@@ -477,7 +477,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -493,7 +493,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -509,7 +509,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -525,7 +525,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -541,7 +541,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -557,7 +557,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -573,7 +573,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -589,7 +589,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -605,7 +605,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -621,7 +621,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -637,7 +637,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -653,7 +653,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -669,7 +669,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -685,7 +685,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -701,7 +701,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -717,7 +717,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -733,7 +733,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -749,7 +749,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -765,7 +765,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -781,7 +781,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -797,7 +797,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -813,7 +813,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -829,7 +829,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -845,7 +845,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -861,7 +861,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -877,7 +877,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -893,7 +893,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "13"
         );
 
@@ -909,7 +909,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -925,7 +925,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -941,7 +941,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "3.14"
         );
 
@@ -957,7 +957,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
 
@@ -973,7 +973,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -989,7 +989,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -1005,7 +1005,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"b2567a71-6966-49b1-8976-ad3f4e397b05\""
         );
 
@@ -1021,7 +1021,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -1037,7 +1037,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -1053,7 +1053,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
 
@@ -1069,7 +1069,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"2014-01-01T23:28:56.782Z\""
         );
 
@@ -1090,7 +1090,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -1106,7 +1106,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -1122,7 +1122,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
 
@@ -1138,7 +1138,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"2014-01-01T23:28:56.782Z\""
         );
 
@@ -1158,7 +1158,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -1174,7 +1174,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -1190,7 +1190,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
 
@@ -1206,7 +1206,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"Zm9v\""
         );
 
@@ -1222,7 +1222,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "null"
         );
 
@@ -1238,7 +1238,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "true"
         );
 
@@ -1254,7 +1254,7 @@ public class OptionalExtensionsTests
     {
         // Arrange
         var json = Json.Parse(
-            // language=JSON
+            // lang=json
             "\"foo\""
         );
 
