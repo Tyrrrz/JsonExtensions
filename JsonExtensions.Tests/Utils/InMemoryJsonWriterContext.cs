@@ -11,8 +11,7 @@ internal class InMemoryJsonWriterContext : IDisposable
 
     public Utf8JsonWriter Writer { get; }
 
-    public InMemoryJsonWriterContext() =>
-        Writer = new Utf8JsonWriter(_buffer);
+    public InMemoryJsonWriterContext() => Writer = new Utf8JsonWriter(_buffer);
 
     public byte[] GetBytes()
     {

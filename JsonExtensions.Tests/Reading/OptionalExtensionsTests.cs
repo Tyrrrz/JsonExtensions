@@ -1077,12 +1077,15 @@ public class OptionalExtensionsTests
         var value = json.GetDateTimeOrNull();
 
         // Assert
-        value.Should().Be(
-            DateTime.Parse(
-                "2014-01-01T23:28:56.782Z",
-                CultureInfo.InvariantCulture,
-                DateTimeStyles.AdjustToUniversal)
-        );
+        value
+            .Should()
+            .Be(
+                DateTime.Parse(
+                    "2014-01-01T23:28:56.782Z",
+                    CultureInfo.InvariantCulture,
+                    DateTimeStyles.AdjustToUniversal
+                )
+            );
     }
 
     [Fact]
@@ -1146,11 +1149,9 @@ public class OptionalExtensionsTests
         var value = json.GetDateTimeOffsetOrNull();
 
         // Assert
-        value.Should().Be(
-            DateTimeOffset.Parse(
-                "2014-01-01T23:28:56.782Z",
-                CultureInfo.InvariantCulture)
-        );
+        value
+            .Should()
+            .Be(DateTimeOffset.Parse("2014-01-01T23:28:56.782Z", CultureInfo.InvariantCulture));
     }
 
     [Fact]

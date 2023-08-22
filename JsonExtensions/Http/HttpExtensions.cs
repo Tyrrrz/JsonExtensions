@@ -16,7 +16,8 @@ public static class HttpExtensions
     /// </summary>
     public static async Task<JsonElement> ReadAsJsonAsync(
         this HttpContent content,
-        CancellationToken cancellationToken = default)
+        CancellationToken cancellationToken = default
+    )
     {
         using var stream = await content.ReadAsStreamAsync(cancellationToken);
         using var document = await JsonDocument.ParseAsync(stream, default, cancellationToken);
@@ -30,7 +31,8 @@ public static class HttpExtensions
     public static async Task<JsonElement> GetJsonAsync(
         this HttpClient http,
         Uri requestUri,
-        CancellationToken cancellationToken = default)
+        CancellationToken cancellationToken = default
+    )
     {
         using var response = await http.GetAsync(
             requestUri,
@@ -49,6 +51,7 @@ public static class HttpExtensions
     public static async Task<JsonElement> GetJsonAsync(
         this HttpClient http,
         string requestUri,
-        CancellationToken cancellationToken = default) =>
+        CancellationToken cancellationToken = default
+    ) =>
         await http.GetJsonAsync(new Uri(requestUri, UriKind.RelativeOrAbsolute), cancellationToken);
 }

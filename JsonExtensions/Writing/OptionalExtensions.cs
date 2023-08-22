@@ -302,7 +302,11 @@ public static class OptionalExtensions
     /// <summary>
     /// Writes a <see cref="DateTimeOffset"/> property or null.
     /// </summary>
-    public static void WriteString(this Utf8JsonWriter writer, string propertyName, DateTimeOffset? value)
+    public static void WriteString(
+        this Utf8JsonWriter writer,
+        string propertyName,
+        DateTimeOffset? value
+    )
     {
         writer.WritePropertyName(propertyName);
         writer.WriteStringValue(value);

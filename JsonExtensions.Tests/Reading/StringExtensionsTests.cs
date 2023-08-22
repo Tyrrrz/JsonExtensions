@@ -15,10 +15,10 @@ public class StringExtensionsTests
             // lang=json
             "\"foo\""
         );
-            
+
         // Act
         var value = json.GetNonNullString();
-            
+
         // Assert
         value.Should().Be("foo");
     }
@@ -31,11 +31,11 @@ public class StringExtensionsTests
             // lang=json
             "null"
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonNullString());
     }
-        
+
     [Fact]
     public void GetNonNullString_Negative_NotString_Test()
     {
@@ -44,11 +44,11 @@ public class StringExtensionsTests
             // lang=json
             "true"
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonNullString());
     }
-        
+
     [Fact]
     public void GetNonEmptyString_Positive_Test()
     {
@@ -57,10 +57,10 @@ public class StringExtensionsTests
             // lang=json
             "\"foo\""
         );
-            
+
         // Act
         var value = json.GetNonEmptyString();
-            
+
         // Assert
         value.Should().Be("foo");
     }
@@ -73,11 +73,11 @@ public class StringExtensionsTests
             // lang=json
             "null"
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
     }
-        
+
     [Fact]
     public void GetNonEmptyString_Negative_NotString_Test()
     {
@@ -86,11 +86,11 @@ public class StringExtensionsTests
             // lang=json
             "true"
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
     }
-        
+
     [Fact]
     public void GetNonEmptyString_Negative_EmptyString_Test()
     {
@@ -99,11 +99,11 @@ public class StringExtensionsTests
             // lang=json
             "\"\""
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonEmptyString());
     }
-        
+
     [Fact]
     public void GetNonWhiteSpaceString_Positive_Test()
     {
@@ -112,10 +112,10 @@ public class StringExtensionsTests
             // lang=json
             "\"foo\""
         );
-            
+
         // Act
         var value = json.GetNonWhiteSpaceString();
-            
+
         // Assert
         value.Should().Be("foo");
     }
@@ -128,11 +128,11 @@ public class StringExtensionsTests
             // lang=json
             "null"
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
     }
-        
+
     [Fact]
     public void GetNonWhiteSpaceString_Negative_NotString_Test()
     {
@@ -141,11 +141,11 @@ public class StringExtensionsTests
             // lang=json
             "true"
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
     }
-        
+
     [Fact]
     public void GetNonWhiteSpaceString_Negative_EmptyString_Test()
     {
@@ -154,11 +154,11 @@ public class StringExtensionsTests
             // lang=json
             "\"\""
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
     }
-        
+
     [Fact]
     public void GetNonWhiteSpaceString_Negative_WhiteSpaceString_Test()
     {
@@ -167,7 +167,7 @@ public class StringExtensionsTests
             // lang=json
             "\"  \""
         );
-            
+
         // Act & assert
         Assert.Throws<InvalidOperationException>(() => json.GetNonWhiteSpaceString());
     }

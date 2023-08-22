@@ -20,12 +20,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":true}
             """
-        );
+            );
     }
 
     [Fact]
@@ -40,12 +43,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -60,12 +66,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -80,12 +89,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -100,12 +112,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -120,12 +135,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -140,12 +158,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -160,12 +181,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -180,12 +204,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -200,12 +227,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -220,12 +250,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -240,12 +273,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -260,12 +296,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -280,12 +319,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -300,12 +342,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -320,12 +365,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -340,12 +388,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -360,12 +411,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -380,12 +434,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -400,12 +457,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -420,12 +480,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -440,12 +503,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -460,12 +526,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":13}
             """
-        );
+            );
     }
 
     [Fact]
@@ -480,12 +549,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -500,12 +572,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":"00000000-0000-0000-0000-000000000000"}
             """
-        );
+            );
     }
 
     [Fact]
@@ -520,12 +595,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -540,12 +618,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":"1970-01-01T00:00:00Z"}
             """
-        );
+            );
     }
 
     [Fact]
@@ -560,12 +641,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 
     [Fact]
@@ -580,12 +664,15 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":"1970-01-01T00:00:00+00:00"}
             """
-        );
+            );
     }
 
     [Fact]
@@ -600,11 +687,14 @@ public class OptionalExtensionsTests
         context.Writer.WriteEndObject();
 
         // Assert
-        context.GetString().Should().Be(
-            // lang=json
-            """
+        context
+            .GetString()
+            .Should()
+            .Be(
+                // lang=json
+                """
             {"foo":null}
             """
-        );
+            );
     }
 }

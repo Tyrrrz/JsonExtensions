@@ -22,8 +22,10 @@ public static class OptionalExtensions
             return null;
         }
 
-        if (element.TryGetProperty(propertyName, out var result) &&
-            result.ValueKind is not JsonValueKind.Null and not JsonValueKind.Undefined)
+        if (
+            element.TryGetProperty(propertyName, out var result)
+            && result.ValueKind is not JsonValueKind.Null and not JsonValueKind.Undefined
+        )
         {
             return result;
         }
@@ -40,9 +42,11 @@ public static class OptionalExtensions
     /// </summary>
     public static JsonElement? GetByIndexOrNull(this JsonElement element, int index)
     {
-        if (element.ValueKind != JsonValueKind.Array ||
-            index < 0 ||
-            index >= element.GetArrayLength())
+        if (
+            element.ValueKind != JsonValueKind.Array
+            || index < 0
+            || index >= element.GetArrayLength()
+        )
         {
             return null;
         }
@@ -76,8 +80,7 @@ public static class OptionalExtensions
     /// Returns an empty enumerator if the element is not an array.
     /// </summary>
     public static JsonElement.ArrayEnumerator EnumerateArrayOrEmpty(this JsonElement element) =>
-        element.EnumerateArrayOrNull() ??
-        default;
+        element.EnumerateArrayOrNull() ?? default;
 
     /// <summary>
     /// Enumerates the element as an object.
@@ -98,20 +101,20 @@ public static class OptionalExtensions
     /// Returns empty enumerator if the element is not an object.
     /// </summary>
     public static JsonElement.ObjectEnumerator EnumerateObjectOrEmpty(this JsonElement element) =>
-        element.EnumerateObjectOrNull() ??
-        default;
+        element.EnumerateObjectOrNull() ?? default;
 
     /// <summary>
     /// Gets the value of the element as a <see cref="bool"/>.
     ///
     /// Returns null if the element contains a value of any other kind.
     /// </summary>
-    public static bool? GetBooleanOrNull(this JsonElement element) => element.ValueKind switch
-    {
-        JsonValueKind.True => true,
-        JsonValueKind.False => false,
-        _ => null
-    };
+    public static bool? GetBooleanOrNull(this JsonElement element) =>
+        element.ValueKind switch
+        {
+            JsonValueKind.True => true,
+            JsonValueKind.False => false,
+            _ => null
+        };
 
     /// <summary>
     /// Gets the value of the element as a <see cref="byte"/>.
@@ -295,9 +298,7 @@ public static class OptionalExtensions
     /// Returns null if the element contains a value of any other kind.
     /// </summary>
     public static string? GetStringOrNull(this JsonElement element) =>
-        element.ValueKind == JsonValueKind.String
-            ? element.GetString()
-            : null;
+        element.ValueKind == JsonValueKind.String ? element.GetString() : null;
 
     /// <summary>
     /// Gets the value of the element as a <see cref="Guid"/>.

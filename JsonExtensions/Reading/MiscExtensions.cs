@@ -10,7 +10,11 @@ public static class MiscExtensions
     /// <summary>
     /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
     /// </summary>
-    public static void Deconstruct(this JsonProperty property, out string name, out JsonElement value)
+    public static void Deconstruct(
+        this JsonProperty property,
+        out string name,
+        out JsonElement value
+    )
     {
         name = property.Name;
         value = property.Value;

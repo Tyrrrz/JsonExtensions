@@ -12,8 +12,8 @@ public static class StringExtensions
     /// Gets the value of the element as a non-null <see cref="string"/>.
     /// </summary>
     public static string GetNonNullString(this JsonElement element) =>
-        element.GetStringOrNull() ??
-        throw new InvalidOperationException(
+        element.GetStringOrNull()
+        ?? throw new InvalidOperationException(
             "Cannot read the specified JSON element as a non-null string value."
         );
 
@@ -32,11 +32,11 @@ public static class StringExtensions
     /// Gets the value of the element as a non-empty <see cref="string"/>.
     /// </summary>
     public static string GetNonEmptyString(this JsonElement element) =>
-        element.GetNonEmptyStringOrNull() ??
-        throw new InvalidOperationException(
+        element.GetNonEmptyStringOrNull()
+        ?? throw new InvalidOperationException(
             "Cannot read the specified JSON element as a non-empty string value."
         );
-        
+
     /// <summary>
     /// Gets the value of the element as a non-empty and non-whitespace <see cref="string"/>.
     ///
@@ -52,8 +52,8 @@ public static class StringExtensions
     /// Gets the value of the element as a non-empty and non-whitespace <see cref="string"/>.
     /// </summary>
     public static string GetNonWhiteSpaceString(this JsonElement element) =>
-        element.GetNonWhiteSpaceStringOrNull() ??
-        throw new InvalidOperationException(
+        element.GetNonWhiteSpaceStringOrNull()
+        ?? throw new InvalidOperationException(
             "Cannot read the specified JSON element as a non-empty and non-whitespace string value."
         );
 }

@@ -37,8 +37,6 @@ public class PathExtensionsTests
         );
 
         // Act & assert
-        Assert.Throws<KeyNotFoundException>(() =>
-            json.GetPropertyByPath("foo.bar.baa")
-        );
+        Assert.Throws<KeyNotFoundException>(() => json.GetPropertyByPath("foo.bar.baa"));
     }
 }

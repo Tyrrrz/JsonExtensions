@@ -15,7 +15,10 @@ public static class PathExtensions
     /// Returns null if no matching property is found.
     /// </summary>
     /// <remarks>This currently supports only simple paths, e.g. 'prop1.prop2.prop3'.</remarks>
-    public static JsonElement? GetPropertyByPathOrNull(this JsonElement element, string propertyPath)
+    public static JsonElement? GetPropertyByPathOrNull(
+        this JsonElement element,
+        string propertyPath
+    )
     {
         var propertyNames = propertyPath.Split('.', StringSplitOptions.RemoveEmptyEntries);
 
@@ -35,6 +38,8 @@ public static class PathExtensions
     /// Gets the <see cref="JsonElement"/> that represents a property that matches the specified path.
     /// </summary>
     public static JsonElement GetPropertyByPath(this JsonElement element, string propertyPath) =>
-        element.GetPropertyByPathOrNull(propertyPath) ??
-        throw new KeyNotFoundException($"Cannot find JSON property matching path '{propertyPath}'.");
+        element.GetPropertyByPathOrNull(propertyPath)
+        ?? throw new KeyNotFoundException(
+            $"Cannot find JSON property matching path '{propertyPath}'."
+        );
 }
