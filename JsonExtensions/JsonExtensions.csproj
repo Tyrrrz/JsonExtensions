@@ -12,11 +12,7 @@
     <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/blob/master/Changelog.md</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <DebugType>embedded</DebugType>
   </PropertyGroup>
 
   <ItemGroup>
