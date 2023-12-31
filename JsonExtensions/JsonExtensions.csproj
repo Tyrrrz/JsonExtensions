@@ -10,7 +10,7 @@
     <Description>Various extensions to power up System.Text.Json.</Description>
     <PackageTags>system.text.json system text json extensions parsing deserialization serialization</PackageTags>
     <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/releases/tag/$(Version)</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/releases</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
