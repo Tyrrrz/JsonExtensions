@@ -26,8 +26,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":true}
-            """
+                {"foo":true}
+                """
             );
     }
 
@@ -49,8 +49,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -72,8 +72,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -95,8 +95,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -118,8 +118,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -141,8 +141,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -164,8 +164,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -187,8 +187,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -210,8 +210,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -233,8 +233,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -256,8 +256,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -279,8 +279,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -302,8 +302,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -325,8 +325,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -348,8 +348,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -371,8 +371,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -394,8 +394,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -417,8 +417,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -440,8 +440,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -463,8 +463,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -486,8 +486,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -509,8 +509,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -532,8 +532,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":13}
-            """
+                {"foo":13}
+                """
             );
     }
 
@@ -555,8 +555,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -578,8 +578,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":"00000000-0000-0000-0000-000000000000"}
-            """
+                {"foo":"00000000-0000-0000-0000-000000000000"}
+                """
             );
     }
 
@@ -601,8 +601,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -624,8 +624,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":"1970-01-01T00:00:00Z"}
-            """
+                {"foo":"1970-01-01T00:00:00Z"}
+                """
             );
     }
 
@@ -647,8 +647,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 
@@ -670,8 +670,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":"1970-01-01T00:00:00+00:00"}
-            """
+                {"foo":"1970-01-01T00:00:00+00:00"}
+                """
             );
     }
 
@@ -693,8 +693,8 @@ public class OptionalExtensionsTests
             .Be(
                 // lang=json
                 """
-            {"foo":null}
-            """
+                {"foo":null}
+                """
             );
     }
 }
