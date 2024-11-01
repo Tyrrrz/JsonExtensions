@@ -113,7 +113,7 @@ public static class OptionalExtensions
         {
             JsonValueKind.True => true,
             JsonValueKind.False => false,
-            _ => null
+            _ => null,
         };
 
     /// <summary>
