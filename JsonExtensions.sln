@@ -12,6 +12,8 @@ ProjectSection(SolutionItems) = preProject
 	Readme.md = Readme.md
 	Directory.Build.props = Directory.Build.props
 	License.txt = License.txt
+	global.json = global.json
+	NuGet.config = NuGet.config
 EndProjectSection
 EndProject
 Global
