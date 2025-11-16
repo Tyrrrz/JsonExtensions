@@ -7,16 +7,16 @@ namespace JsonExtensions.Reading;
 /// </summary>
 public static class MiscExtensions
 {
-    /// <summary>
-    /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
-    /// </summary>
-    public static void Deconstruct(
-        this JsonProperty property,
-        out string name,
-        out JsonElement value
-    )
+    /// <inheritdoc cref="MiscExtensions" />
+    extension(JsonProperty property)
     {
-        name = property.Name;
-        value = property.Value;
+        /// <summary>
+        /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
+        /// </summary>
+        public void Deconstruct(out string name, out JsonElement value)
+        {
+            name = property.Name;
+            value = property.Value;
+        }
     }
 }
