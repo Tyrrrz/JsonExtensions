@@ -11,15 +11,11 @@
       >true</IsAotCompatible
     >
   </PropertyGroup>
+
   <PropertyGroup>
-    <Authors>$(Company)</Authors>
-    <Description>Various extensions to power up System.Text.Json.</Description>
-    <PackageTags>system.text.json system text json extensions parsing deserialization serialization</PackageTags>
-    <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/releases</PackageReleaseNotes>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="ConfigureAwait.Fody" Version="3.3.2" PrivateAssets="all" />
     <PackageReference Include="CSharpier.MsBuild" Version="1.2.1" PrivateAssets="all" />
