@@ -163,6 +163,6 @@ var child = json.GetPropertyByPath("foo.bar.baz");
 var value = child.GetInt32(); // 13
 ```
 
-> **Warning**:
+> [!WARNING]
 > Note this only supports basic paths involving child access operators.
 > It doesn't (yet) have full support for JPath.
