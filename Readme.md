@@ -15,7 +15,7 @@
     </tr>
 </table>
 
-**JsonExtensions** is a library that provides a set of helpful utilities for types defined in the [`System.Text.Json`](https://docs.microsoft.com/en-us/dotnet/api/system.text.json) namespace.
+**JsonExtensions** is a library that provides a set of helpful utilities for types defined in the [`System.Text.Json`](https://learn.microsoft.com/dotnet/api/system.text.json) namespace.
 
 ## Terms of use<sup>[[?]](https://github.com/Tyrrrz/.github/blob/master/docs/why-so-political.md)</sup>
 
