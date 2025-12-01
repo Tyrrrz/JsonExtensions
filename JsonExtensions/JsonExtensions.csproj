@@ -21,10 +21,10 @@
     <PackageReference Include="CSharpier.MsBuild" Version="1.2.1" PrivateAssets="all" />
     <PackageReference Include="Fody" Version="6.9.3" PrivateAssets="all" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0" PrivateAssets="all" />
-    <PackageReference Include="PolyShim" Version="1.15.0" PrivateAssets="all" />
+    <PackageReference Include="PolyShim" Version="2.2.0" PrivateAssets="all" />
     <PackageReference
       Include="System.Text.Json"
-      Version="8.0.5"
+      Version="10.0.0"
       Condition="!$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'netcoreapp3.0'))"
     />
   </ItemGroup>
