@@ -13,8 +13,13 @@
   </PropertyGroup>
 
   <PropertyGroup>
+    <PackageIcon>favicon.png</PackageIcon>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../favicon.png" Pack="true" PackagePath="" Visible="false" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="ConfigureAwait.Fody" PrivateAssets="all" />
