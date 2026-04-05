@@ -45,7 +45,12 @@ You can use the static methods on the `Json` class to parse JSON directly into a
 ```csharp
 using JsonExtensions;
 
-var jsonRaw = "{ \"foo\": \"bar\" }";
+var jsonRaw =
+    """
+    {
+        "foo": "bar"
+    }
+    """;
 
 var jsonElement = Json.Parse(jsonRaw); // returns JsonElement
 var jsonElement = Json.TryParse(jsonRaw); // returns null in case of invalid JSON
@@ -160,7 +165,16 @@ var json = await response.Content.ReadAsJsonAsync(); // returns JsonElement
 Using `jsonElement.GetPropertyByPathOrNull(...)` or `jsonElement.GetPropertyByPath(...)`, you can get an inner child by its path:
 
 ```csharp
-var json = Json.Parse("{\"foo\":{\"bar\":{\"baz\":13}}}");
+var json =
+    """
+    {
+        "foo" : {
+            "bar": {
+                "baz": 13
+            }
+        }
+    }
+    """;
 
 var child = json.GetPropertyByPath("foo.bar.baz");
 
