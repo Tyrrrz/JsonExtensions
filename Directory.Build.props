@@ -1,5 +1,4 @@
 <Project>
-
   <PropertyGroup>
     <Version>0.0.0-dev</Version>
     <Company>Tyrrrz</Company>
@@ -24,11 +23,10 @@
 
   <PropertyGroup>
     <Authors>$(Company)</Authors>
-    <Description>Various extensions to power up System.Text.Json.</Description>
+    <Description>Various extensions to enhance System.Text.Json.</Description>
     <PackageTags>system.text.json system text json extensions parsing deserialization serialization</PackageTags>
     <PackageProjectUrl>https://github.com/Tyrrrz/JsonExtensions</PackageProjectUrl>
     <PackageReleaseNotes>https://github.com/Tyrrrz/JsonExtensions/releases</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
-
 </Project>

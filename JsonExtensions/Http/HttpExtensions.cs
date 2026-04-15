@@ -21,8 +21,13 @@ public static class HttpExtensions
             CancellationToken cancellationToken = default
         )
         {
-            using var stream = await content.ReadAsStreamAsync(cancellationToken);
-            using var document = await JsonDocument.ParseAsync(stream, default, cancellationToken);
+            using var stream = await content
+                .ReadAsStreamAsync(cancellationToken)
+                .ConfigureAwait(false);
+
+            using var document = await JsonDocument
+                .ParseAsync(stream, default, cancellationToken)
+                .ConfigureAwait(false);
 
             return document.RootElement.Clone();
         }
@@ -40,14 +45,15 @@ public static class HttpExtensions
         )
         {
             using var response = await http.GetAsync(
-                requestUri,
-                HttpCompletionOption.ResponseHeadersRead,
-                cancellationToken
-            );
+                    requestUri,
+                    HttpCompletionOption.ResponseHeadersRead,
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
 
             response.EnsureSuccessStatusCode();
 
-            return await response.Content.ReadAsJsonAsync(cancellationToken);
+            return await response.Content.ReadAsJsonAsync(cancellationToken).ConfigureAwait(false);
         }
 
         /// <summary>
@@ -58,8 +64,9 @@ public static class HttpExtensions
             CancellationToken cancellationToken = default
         ) =>
             await http.GetJsonAsync(
-                new Uri(requestUri, UriKind.RelativeOrAbsolute),
-                cancellationToken
-            );
+                    new Uri(requestUri, UriKind.RelativeOrAbsolute),
+                    cancellationToken
+                )
+                .ConfigureAwait(false);
     }
 }
