@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using FluentAssertions;
 using JsonExtensions.Tests.Utils;
 using JsonExtensions.Writing;
