@@ -12,59 +12,6 @@ public static class OptionalExtensions
     extension(JsonElement element)
     {
         /// <summary>
-        /// Gets a property by its name.
-        ///
-        /// Returns null if the element is not an object,
-        /// or if the property is not defined,
-        /// or if the property has a null value.
-        /// </summary>
-        public JsonElement? GetPropertyOrNull(string propertyName)
-        {
-            if (element.ValueKind != JsonValueKind.Object)
-            {
-                return null;
-            }
-
-            if (
-                element.TryGetProperty(propertyName, out var result)
-                && result.ValueKind is not JsonValueKind.Null and not JsonValueKind.Undefined
-            )
-            {
-                return result;
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Gets a child element by its array index.
-        ///
-        /// Returns null if the element is not an array,
-        /// or if the index is out of bounds,
-        /// or if the index refers to a null value.
-        /// </summary>
-        public JsonElement? GetByIndexOrNull(int index)
-        {
-            if (
-                element.ValueKind != JsonValueKind.Array
-                || index < 0
-                || index >= element.GetArrayLength()
-            )
-            {
-                return null;
-            }
-
-            var child = element[index];
-
-            if (child.ValueKind is JsonValueKind.Null or JsonValueKind.Undefined)
-            {
-                return null;
-            }
-
-            return child;
-        }
-
-        /// <summary>
         /// Enumerates the element as an array.
         ///
         /// Returns null if the element is not an array.
@@ -110,6 +57,34 @@ public static class OptionalExtensions
             };
 
         /// <summary>
+        /// Gets a child element by its array index.
+        ///
+        /// Returns null if the element is not an array,
+        /// or if the index is out of bounds,
+        /// or if the index refers to a null value.
+        /// </summary>
+        public JsonElement? GetByIndexOrNull(int index)
+        {
+            if (
+                element.ValueKind != JsonValueKind.Array
+                || index < 0
+                || index >= element.GetArrayLength()
+            )
+            {
+                return null;
+            }
+
+            var child = element[index];
+
+            if (child.ValueKind is JsonValueKind.Null or JsonValueKind.Undefined)
+            {
+                return null;
+            }
+
+            return child;
+        }
+
+        /// <summary>
         /// Gets the value of the element as a <see cref="byte"/>.
         ///
         /// Returns null if the element contains a value of any other kind.
@@ -117,6 +92,42 @@ public static class OptionalExtensions
         public byte? GetByteOrNull() =>
             element.ValueKind == JsonValueKind.Number
                 ? element.TryGetByte(out var result)
+                    ? result
+                    : null
+                : null;
+
+        /// <summary>
+        /// Gets the value of the element as a base64-encoded byte array.
+        ///
+        /// Returns null if the element contains a value of any other kind.
+        /// </summary>
+        public byte[]? GetBytesFromBase64OrNull() =>
+            element.ValueKind == JsonValueKind.String
+                ? element.TryGetBytesFromBase64(out var result)
+                    ? result
+                    : null
+                : null;
+
+        /// <summary>
+        /// Gets the value of the element as a <see cref="DateTimeOffset"/>.
+        ///
+        /// Returns null if the element contains a value of any other kind.
+        /// </summary>
+        public DateTimeOffset? GetDateTimeOffsetOrNull() =>
+            element.ValueKind == JsonValueKind.String
+                ? element.TryGetDateTimeOffset(out var result)
+                    ? result
+                    : null
+                : null;
+
+        /// <summary>
+        /// Gets the value of the element as a <see cref="DateTime"/>.
+        ///
+        /// Returns null if the element contains a value of any other kind.
+        /// </summary>
+        public DateTime? GetDateTimeOrNull() =>
+            element.ValueKind == JsonValueKind.String
+                ? element.TryGetDateTime(out var result)
                     ? result
                     : null
                 : null;
@@ -146,13 +157,13 @@ public static class OptionalExtensions
                 : null;
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="float"/>.
+        /// Gets the value of the element as a <see cref="Guid"/>.
         ///
         /// Returns null if the element contains a value of any other kind.
         /// </summary>
-        public float? GetSingleOrNull() =>
-            element.ValueKind == JsonValueKind.Number
-                ? element.TryGetSingle(out var result)
+        public Guid? GetGuidOrNull() =>
+            element.ValueKind == JsonValueKind.String
+                ? element.TryGetGuid(out var result)
                     ? result
                     : null
                 : null;
@@ -194,6 +205,31 @@ public static class OptionalExtensions
                 : null;
 
         /// <summary>
+        /// Gets a property by its name.
+        ///
+        /// Returns null if the element is not an object,
+        /// or if the property is not defined,
+        /// or if the property has a null value.
+        /// </summary>
+        public JsonElement? GetPropertyOrNull(string propertyName)
+        {
+            if (element.ValueKind != JsonValueKind.Object)
+            {
+                return null;
+            }
+
+            if (
+                element.TryGetProperty(propertyName, out var result)
+                && result.ValueKind is not JsonValueKind.Null and not JsonValueKind.Undefined
+            )
+            {
+                return result;
+            }
+
+            return null;
+        }
+
+        /// <summary>
         /// Gets the value of the element as a <see cref="sbyte"/>.
         ///
         /// Returns null if the element contains a value of any other kind.
@@ -204,6 +240,26 @@ public static class OptionalExtensions
                     ? result
                     : null
                 : null;
+
+        /// <summary>
+        /// Gets the value of the element as a <see cref="float"/>.
+        ///
+        /// Returns null if the element contains a value of any other kind.
+        /// </summary>
+        public float? GetSingleOrNull() =>
+            element.ValueKind == JsonValueKind.Number
+                ? element.TryGetSingle(out var result)
+                    ? result
+                    : null
+                : null;
+
+        /// <summary>
+        /// Gets the value of the element as a <see cref="string"/>.
+        ///
+        /// Returns null if the element contains a value of any other kind.
+        /// </summary>
+        public string? GetStringOrNull() =>
+            element.ValueKind == JsonValueKind.String ? element.GetString() : null;
 
         /// <summary>
         /// Gets the value of the element as a <see cref="ushort"/>.
@@ -237,62 +293,6 @@ public static class OptionalExtensions
         public ulong? GetUInt64OrNull() =>
             element.ValueKind == JsonValueKind.Number
                 ? element.TryGetUInt64(out var result)
-                    ? result
-                    : null
-                : null;
-
-        /// <summary>
-        /// Gets the value of the element as a <see cref="string"/>.
-        ///
-        /// Returns null if the element contains a value of any other kind.
-        /// </summary>
-        public string? GetStringOrNull() =>
-            element.ValueKind == JsonValueKind.String ? element.GetString() : null;
-
-        /// <summary>
-        /// Gets the value of the element as a <see cref="Guid"/>.
-        ///
-        /// Returns null if the element contains a value of any other kind.
-        /// </summary>
-        public Guid? GetGuidOrNull() =>
-            element.ValueKind == JsonValueKind.String
-                ? element.TryGetGuid(out var result)
-                    ? result
-                    : null
-                : null;
-
-        /// <summary>
-        /// Gets the value of the element as a <see cref="DateTime"/>.
-        ///
-        /// Returns null if the element contains a value of any other kind.
-        /// </summary>
-        public DateTime? GetDateTimeOrNull() =>
-            element.ValueKind == JsonValueKind.String
-                ? element.TryGetDateTime(out var result)
-                    ? result
-                    : null
-                : null;
-
-        /// <summary>
-        /// Gets the value of the element as a <see cref="DateTimeOffset"/>.
-        ///
-        /// Returns null if the element contains a value of any other kind.
-        /// </summary>
-        public DateTimeOffset? GetDateTimeOffsetOrNull() =>
-            element.ValueKind == JsonValueKind.String
-                ? element.TryGetDateTimeOffset(out var result)
-                    ? result
-                    : null
-                : null;
-
-        /// <summary>
-        /// Gets the value of the element as a base64-encoded byte array.
-        ///
-        /// Returns null if the element contains a value of any other kind.
-        /// </summary>
-        public byte[]? GetBytesFromBase64OrNull() =>
-            element.ValueKind == JsonValueKind.String
-                ? element.TryGetBytesFromBase64(out var result)
                     ? result
                     : null
                 : null;

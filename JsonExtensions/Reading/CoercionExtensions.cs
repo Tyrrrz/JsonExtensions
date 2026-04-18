@@ -115,32 +115,6 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="float"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
-        /// </summary>
-        public float? GetSingleCoercedOrNull() =>
-            element.ValueKind switch
-            {
-                JsonValueKind.String => float.ParseOrNull(
-                    element.GetString(),
-                    CultureInfo.InvariantCulture
-                ),
-                _ => element.GetSingleOrNull(),
-            };
-
-        /// <summary>
-        /// Gets the value of the element as a <see cref="float"/>,
-        /// either by reading it directly or by coercing it from a string.
-        /// </summary>
-        public float GetSingleCoerced() =>
-            element.GetSingleCoercedOrNull()
-            ?? throw new InvalidOperationException(
-                "Cannot read or coerce the specified JSON element into a float value."
-            );
-
-        /// <summary>
         /// Gets the value of the element as a <see cref="short"/>,
         /// either by reading it directly or by coercing it from a string.
         ///
@@ -242,6 +216,32 @@ public static class CoercionExtensions
             element.GetSByteCoercedOrNull()
             ?? throw new InvalidOperationException(
                 "Cannot read or coerce the specified JSON element into an sbyte value."
+            );
+
+        /// <summary>
+        /// Gets the value of the element as a <see cref="float"/>,
+        /// either by reading it directly or by coercing it from a string.
+        ///
+        /// Returns null if the element contains a value of any other kind.
+        /// </summary>
+        public float? GetSingleCoercedOrNull() =>
+            element.ValueKind switch
+            {
+                JsonValueKind.String => float.ParseOrNull(
+                    element.GetString(),
+                    CultureInfo.InvariantCulture
+                ),
+                _ => element.GetSingleOrNull(),
+            };
+
+        /// <summary>
+        /// Gets the value of the element as a <see cref="float"/>,
+        /// either by reading it directly or by coercing it from a string.
+        /// </summary>
+        public float GetSingleCoerced() =>
+            element.GetSingleCoercedOrNull()
+            ?? throw new InvalidOperationException(
+                "Cannot read or coerce the specified JSON element into a float value."
             );
 
         /// <summary>

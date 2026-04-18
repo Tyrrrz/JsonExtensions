@@ -12,15 +12,6 @@ public static class StringExtensions
     extension(JsonElement element)
     {
         /// <summary>
-        /// Gets the value of the element as a non-null <see cref="string"/>.
-        /// </summary>
-        public string GetNonNullString() =>
-            element.GetStringOrNull()
-            ?? throw new InvalidOperationException(
-                "Cannot read the specified JSON element as a non-null string value."
-            );
-
-        /// <summary>
         /// Gets the value of the element as a non-empty <see cref="string"/>.
         ///
         /// Returns null if the element contains an empty string or a value of any other kind.
@@ -38,6 +29,15 @@ public static class StringExtensions
             element.GetNonEmptyStringOrNull()
             ?? throw new InvalidOperationException(
                 "Cannot read the specified JSON element as a non-empty string value."
+            );
+
+        /// <summary>
+        /// Gets the value of the element as a non-null <see cref="string"/>.
+        /// </summary>
+        public string GetNonNullString() =>
+            element.GetStringOrNull()
+            ?? throw new InvalidOperationException(
+                "Cannot read the specified JSON element as a non-null string value."
             );
 
         /// <summary>
