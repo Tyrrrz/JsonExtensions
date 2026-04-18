@@ -1,6 +1,7 @@
 using System;
 using System.Globalization;
 using System.Text.Json;
+using PowerKit.Extensions;
 
 namespace JsonExtensions.Reading;
 
@@ -21,9 +22,7 @@ public static class CoercionExtensions
         public bool? GetBooleanCoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => bool.TryParse(element.GetString(), out var result)
-                    ? result
-                    : null,
+                JsonValueKind.String => bool.ParseOrNull(element.GetString()),
                 _ => element.GetBooleanOrNull(),
             };
 
@@ -46,15 +45,10 @@ public static class CoercionExtensions
         public byte? GetByteCoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => byte.TryParse(
+                JsonValueKind.String => byte.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetByteOrNull(),
             };
 
@@ -77,15 +71,10 @@ public static class CoercionExtensions
         public decimal? GetDecimalCoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => decimal.TryParse(
+                JsonValueKind.String => decimal.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Number,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetDecimalOrNull(),
             };
 
@@ -108,15 +97,10 @@ public static class CoercionExtensions
         public double? GetDoubleCoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => double.TryParse(
+                JsonValueKind.String => double.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Number,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetDoubleOrNull(),
             };
 
@@ -139,15 +123,10 @@ public static class CoercionExtensions
         public float? GetSingleCoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => float.TryParse(
+                JsonValueKind.String => float.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Number,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetSingleOrNull(),
             };
 
@@ -170,15 +149,10 @@ public static class CoercionExtensions
         public short? GetInt16CoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => short.TryParse(
+                JsonValueKind.String => short.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetInt16OrNull(),
             };
 
@@ -201,15 +175,10 @@ public static class CoercionExtensions
         public int? GetInt32CoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => int.TryParse(
+                JsonValueKind.String => int.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetInt32OrNull(),
             };
 
@@ -232,15 +201,10 @@ public static class CoercionExtensions
         public long? GetInt64CoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => long.TryParse(
+                JsonValueKind.String => long.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetInt64OrNull(),
             };
 
@@ -263,15 +227,10 @@ public static class CoercionExtensions
         public sbyte? GetSByteCoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => sbyte.TryParse(
+                JsonValueKind.String => sbyte.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetSByteOrNull(),
             };
 
@@ -294,15 +253,10 @@ public static class CoercionExtensions
         public ushort? GetUInt16CoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => ushort.TryParse(
+                JsonValueKind.String => ushort.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetUInt16OrNull(),
             };
 
@@ -325,15 +279,10 @@ public static class CoercionExtensions
         public uint? GetUInt32CoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => uint.TryParse(
+                JsonValueKind.String => uint.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetUInt32OrNull(),
             };
 
@@ -356,15 +305,10 @@ public static class CoercionExtensions
         public ulong? GetUInt64CoercedOrNull() =>
             element.ValueKind switch
             {
-                JsonValueKind.String => ulong.TryParse(
+                JsonValueKind.String => ulong.ParseOrNull(
                     element.GetString(),
-                    NumberStyles.Integer,
-                    CultureInfo.InvariantCulture,
-                    out var result
-                )
-                    ? result
-                    : null,
-
+                    CultureInfo.InvariantCulture
+                ),
                 _ => element.GetUInt64OrNull(),
             };
 
