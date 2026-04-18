@@ -3,7 +3,7 @@ using System.Text.Json;
 namespace JsonExtensions.Reading;
 
 /// <summary>
-/// Miscellaneous extensions for <see cref="JsonElement"/>.
+/// General-purpose extensions for JSON types.
 /// </summary>
 public static class MiscExtensions
 {
@@ -11,7 +11,7 @@ public static class MiscExtensions
     extension(JsonProperty property)
     {
         /// <summary>
-        /// Deconstructs <see cref="JsonProperty"/> into its name and value components.
+        /// Deconstructs the property into its <paramref name="name"/> and <paramref name="value"/> components.
         /// </summary>
         public void Deconstruct(out string name, out JsonElement value)
         {

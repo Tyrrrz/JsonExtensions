@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JsonExtensions.Http;
 
 /// <summary>
-/// Extensions to bridge <see cref="System.Text.Json"/> and <see cref="System.Net.Http"/>.
+/// Extensions for working with JSON over HTTP, bridging <see cref="System.Text.Json"/> and <see cref="System.Net.Http"/>.
 /// </summary>
 public static class HttpExtensions
 {
@@ -15,7 +15,7 @@ public static class HttpExtensions
     extension(HttpContent content)
     {
         /// <summary>
-        /// Reads the content as JSON.
+        /// Reads the HTTP content body and deserializes it as a <see cref="JsonElement"/>.
         /// </summary>
         public async Task<JsonElement> ReadAsJsonAsync(
             CancellationToken cancellationToken = default
@@ -37,7 +37,7 @@ public static class HttpExtensions
     extension(HttpClient http)
     {
         /// <summary>
-        /// Sends a GET request and reads the response content as JSON.
+        /// Sends a GET request to <paramref name="requestUri"/> and deserializes the response body as a <see cref="JsonElement"/>.
         /// </summary>
         public async Task<JsonElement> GetJsonAsync(
             Uri requestUri,
@@ -57,7 +57,7 @@ public static class HttpExtensions
         }
 
         /// <summary>
-        /// Sends a GET request and reads the response content as JSON.
+        /// Sends a GET request to <paramref name="requestUri"/> and deserializes the response body as a <see cref="JsonElement"/>.
         /// </summary>
         public async Task<JsonElement> GetJsonAsync(
             string requestUri,

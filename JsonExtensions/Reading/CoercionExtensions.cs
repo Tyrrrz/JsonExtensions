@@ -6,7 +6,7 @@ using PowerKit.Extensions;
 namespace JsonExtensions.Reading;
 
 /// <summary>
-/// Extensions for reading content from <see cref="JsonElement"/> with coercion.
+/// Extensions for reading values from <see cref="JsonElement"/> with transparent string coercion.
 /// </summary>
 public static class CoercionExtensions
 {
@@ -14,10 +14,8 @@ public static class CoercionExtensions
     extension(JsonElement element)
     {
         /// <summary>
-        /// Gets the value of the element as a <see cref="bool"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="bool"/>, accepting both a native boolean
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public bool? GetBooleanCoercedOrNull() =>
             element.ValueKind switch
@@ -27,8 +25,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="bool"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="bool"/>, accepting both a native boolean
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public bool GetBooleanCoerced() =>
             element.GetBooleanCoercedOrNull()
@@ -37,10 +36,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="byte"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="byte"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public byte? GetByteCoercedOrNull() =>
             element.ValueKind switch
@@ -53,8 +50,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="byte"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="byte"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public byte GetByteCoerced() =>
             element.GetByteCoercedOrNull()
@@ -63,10 +61,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="decimal"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="decimal"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public decimal? GetDecimalCoercedOrNull() =>
             element.ValueKind switch
@@ -79,8 +75,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="decimal"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="decimal"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public decimal GetDecimalCoerced() =>
             element.GetDecimalCoercedOrNull()
@@ -89,10 +86,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="double"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="double"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public double? GetDoubleCoercedOrNull() =>
             element.ValueKind switch
@@ -105,8 +100,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="double"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="double"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public double GetDoubleCoerced() =>
             element.GetDoubleCoercedOrNull()
@@ -115,10 +111,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="short"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="short"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public short? GetInt16CoercedOrNull() =>
             element.ValueKind switch
@@ -131,8 +125,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="short"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="short"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public short GetInt16Coerced() =>
             element.GetInt16CoercedOrNull()
@@ -141,10 +136,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as an <see cref="int"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as an <see cref="int"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public int? GetInt32CoercedOrNull() =>
             element.ValueKind switch
@@ -157,8 +150,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as an <see cref="int"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as an <see cref="int"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public int GetInt32Coerced() =>
             element.GetInt32CoercedOrNull()
@@ -167,10 +161,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="long"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="long"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public long? GetInt64CoercedOrNull() =>
             element.ValueKind switch
@@ -183,8 +175,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="long"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="long"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public long GetInt64Coerced() =>
             element.GetInt64CoercedOrNull()
@@ -193,10 +186,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as an <see cref="sbyte"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as an <see cref="sbyte"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public sbyte? GetSByteCoercedOrNull() =>
             element.ValueKind switch
@@ -209,8 +200,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as an <see cref="sbyte"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as an <see cref="sbyte"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public sbyte GetSByteCoerced() =>
             element.GetSByteCoercedOrNull()
@@ -219,10 +211,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="float"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="float"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public float? GetSingleCoercedOrNull() =>
             element.ValueKind switch
@@ -235,8 +225,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="float"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="float"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public float GetSingleCoerced() =>
             element.GetSingleCoercedOrNull()
@@ -245,10 +236,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="ushort"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="ushort"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public ushort? GetUInt16CoercedOrNull() =>
             element.ValueKind switch
@@ -261,8 +250,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="ushort"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="ushort"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public ushort GetUInt16Coerced() =>
             element.GetUInt16CoercedOrNull()
@@ -271,10 +261,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="uint"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="uint"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public uint? GetUInt32CoercedOrNull() =>
             element.ValueKind switch
@@ -287,8 +275,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="uint"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="uint"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public uint GetUInt32Coerced() =>
             element.GetUInt32CoercedOrNull()
@@ -297,10 +286,8 @@ public static class CoercionExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="ulong"/>,
-        /// either by reading it directly or by coercing it from a string.
-        ///
-        /// Returns null if the element contains a value of any other kind.
+        /// Reads the element's value as a <see cref="ulong"/>, accepting both a native number
+        /// and a string-encoded representation. Returns null if neither form is recognized.
         /// </summary>
         public ulong? GetUInt64CoercedOrNull() =>
             element.ValueKind switch
@@ -313,8 +300,9 @@ public static class CoercionExtensions
             };
 
         /// <summary>
-        /// Gets the value of the element as a <see cref="ulong"/>,
-        /// either by reading it directly or by coercing it from a string.
+        /// Reads the element's value as a <see cref="ulong"/>, accepting both a native number
+        /// and a string-encoded representation. Throws <see cref="InvalidOperationException"/> if
+        /// neither form is recognized.
         /// </summary>
         public ulong GetUInt64Coerced() =>
             element.GetUInt64CoercedOrNull()

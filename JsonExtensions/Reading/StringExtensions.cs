@@ -4,7 +4,7 @@ using System.Text.Json;
 namespace JsonExtensions.Reading;
 
 /// <summary>
-/// Extensions for reading strings from <see cref="JsonElement"/>.
+/// Extensions for extracting validated string values from <see cref="JsonElement"/>.
 /// </summary>
 public static class StringExtensions
 {
@@ -12,9 +12,8 @@ public static class StringExtensions
     extension(JsonElement element)
     {
         /// <summary>
-        /// Gets the value of the element as a non-empty <see cref="string"/>.
-        ///
-        /// Returns null if the element contains an empty string or a value of any other kind.
+        /// Returns the element's string value stripped to a non-empty result,
+        /// or null if the element is not a string or its value is empty.
         /// </summary>
         public string? GetNonEmptyStringOrNull()
         {
@@ -23,7 +22,8 @@ public static class StringExtensions
         }
 
         /// <summary>
-        /// Gets the value of the element as a non-empty <see cref="string"/>.
+        /// Returns the element's string value, requiring it to be non-empty.
+        /// Throws <see cref="InvalidOperationException"/> if the element is not a string or its value is empty.
         /// </summary>
         public string GetNonEmptyString() =>
             element.GetNonEmptyStringOrNull()
@@ -32,7 +32,8 @@ public static class StringExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a non-null <see cref="string"/>.
+        /// Returns the element's string value.
+        /// Throws <see cref="InvalidOperationException"/> if the element is not a string.
         /// </summary>
         public string GetNonNullString() =>
             element.GetStringOrNull()
@@ -41,9 +42,8 @@ public static class StringExtensions
             );
 
         /// <summary>
-        /// Gets the value of the element as a non-empty and non-whitespace <see cref="string"/>.
-        ///
-        /// Returns null if the element contains an empty string, a whitespace string, or a value of any other kind.
+        /// Returns the element's string value stripped to a non-whitespace result,
+        /// or null if the element is not a string or its value is blank.
         /// </summary>
         public string? GetNonWhiteSpaceStringOrNull()
         {
@@ -52,7 +52,8 @@ public static class StringExtensions
         }
 
         /// <summary>
-        /// Gets the value of the element as a non-empty and non-whitespace <see cref="string"/>.
+        /// Returns the element's string value, requiring it to be non-whitespace.
+        /// Throws <see cref="InvalidOperationException"/> if the element is not a string or its value is blank.
         /// </summary>
         public string GetNonWhiteSpaceString() =>
             element.GetNonWhiteSpaceStringOrNull()

@@ -5,7 +5,7 @@ using System.Text.Json;
 namespace JsonExtensions.Reading;
 
 /// <summary>
-/// Extensions for <see cref="JsonElement"/> for dealing with paths.
+/// Extensions for navigating <see cref="JsonElement"/> structures using dot-separated property paths.
 /// </summary>
 public static class PathExtensions
 {
@@ -13,11 +13,10 @@ public static class PathExtensions
     extension(JsonElement element)
     {
         /// <summary>
-        /// Gets the <see cref="JsonElement"/> that represents a property that matches the specified path.
-        ///
-        /// Returns null if no matching property is found.
+        /// Traverses the element along the dot-separated <paramref name="propertyPath"/> and returns
+        /// the matching descendant, or null if any segment is missing.
         /// </summary>
-        /// <remarks>This currently supports only simple paths, e.g. 'prop1.prop2.prop3'.</remarks>
+        /// <remarks>Supports simple dot-notation paths only, e.g. <c>"foo.bar.baz"</c>.</remarks>
         public JsonElement? GetPropertyByPathOrNull(string propertyPath)
         {
             var propertyNames = propertyPath.Split('.', StringSplitOptions.RemoveEmptyEntries);
@@ -35,7 +34,8 @@ public static class PathExtensions
         }
 
         /// <summary>
-        /// Gets the <see cref="JsonElement"/> that represents a property that matches the specified path.
+        /// Traverses the element along the dot-separated <paramref name="propertyPath"/> and returns
+        /// the matching descendant. Throws <see cref="KeyNotFoundException"/> if any segment is missing.
         /// </summary>
         public JsonElement GetPropertyByPath(string propertyPath) =>
             element.GetPropertyByPathOrNull(propertyPath)

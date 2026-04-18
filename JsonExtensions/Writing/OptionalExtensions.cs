@@ -4,7 +4,8 @@ using System.Text.Json;
 namespace JsonExtensions.Writing;
 
 /// <summary>
-/// Extensions for <see cref="Utf8JsonWriter"/> that enable conditional writing for nullable types.
+/// Nullable-aware extensions for <see cref="Utf8JsonWriter"/> that emit a JSON null token
+/// in place of absent values.
 /// </summary>
 public static class OptionalExtensions
 {
@@ -12,7 +13,7 @@ public static class OptionalExtensions
     extension(Utf8JsonWriter writer)
     {
         /// <summary>
-        /// Writes a <see cref="bool"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON boolean, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteBooleanValue(bool? value)
         {
@@ -23,7 +24,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="bool"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a boolean value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteBoolean(string propertyName, bool? value)
         {
@@ -32,7 +34,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="byte"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(byte? value)
         {
@@ -43,7 +45,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="decimal"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(decimal? value)
         {
@@ -54,7 +56,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="double"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(double? value)
         {
@@ -65,7 +67,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="float"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(float? value)
         {
@@ -76,7 +78,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="int"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(int? value)
         {
@@ -87,7 +89,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="long"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(long? value)
         {
@@ -98,7 +100,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="sbyte"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(sbyte? value)
         {
@@ -109,7 +111,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="short"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(short? value)
         {
@@ -120,7 +122,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="uint"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(uint? value)
         {
@@ -131,7 +133,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="ulong"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(ulong? value)
         {
@@ -142,7 +144,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="ushort"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumberValue(ushort? value)
         {
@@ -153,7 +155,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="byte"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, byte? value)
         {
@@ -162,7 +165,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="decimal"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, decimal? value)
         {
@@ -171,7 +175,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="double"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, double? value)
         {
@@ -180,7 +185,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="float"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, float? value)
         {
@@ -189,7 +195,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="int"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, int? value)
         {
@@ -198,7 +205,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="long"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, long? value)
         {
@@ -207,7 +215,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="sbyte"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, sbyte? value)
         {
@@ -216,7 +225,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="short"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, short? value)
         {
@@ -225,7 +235,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="uint"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, uint? value)
         {
@@ -234,7 +245,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="ulong"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, ulong? value)
         {
@@ -243,7 +255,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="ushort"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteNumber(string propertyName, ushort? value)
         {
@@ -252,7 +265,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="DateTime"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON string, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteStringValue(DateTime? value)
         {
@@ -263,7 +276,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="DateTimeOffset"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON string, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteStringValue(DateTimeOffset? value)
         {
@@ -274,7 +287,7 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="Guid"/> value or null.
+        /// Writes <paramref name="value"/> as a JSON string, or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteStringValue(Guid? value)
         {
@@ -285,7 +298,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="DateTime"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a string value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteString(string propertyName, DateTime? value)
         {
@@ -294,7 +308,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="DateTimeOffset"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a string value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteString(string propertyName, DateTimeOffset? value)
         {
@@ -303,7 +318,8 @@ public static class OptionalExtensions
         }
 
         /// <summary>
-        /// Writes a <see cref="Guid"/> property or null.
+        /// Writes a property named <paramref name="propertyName"/> with a string value,
+        /// or a JSON null if <paramref name="value"/> is null.
         /// </summary>
         public void WriteString(string propertyName, Guid? value)
         {
