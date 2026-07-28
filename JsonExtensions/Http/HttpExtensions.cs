@@ -56,9 +56,7 @@ public static class HttpExtensions
             return await response.Content.ReadAsJsonAsync(cancellationToken).ConfigureAwait(false);
         }
 
-        /// <summary>
-        /// Sends a GET request to <paramref name="requestUri"/> and deserializes the response body as a <see cref="JsonElement"/>.
-        /// </summary>
+        /// <inheritdoc cref="GetJsonAsync(HttpClient, Uri, CancellationToken)" />
         public async Task<JsonElement> GetJsonAsync(
             string requestUri,
             CancellationToken cancellationToken = default

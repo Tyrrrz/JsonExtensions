@@ -44,9 +44,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)" />
         public void WriteNumberValue(decimal? value)
         {
             if (value is not null)
@@ -55,9 +53,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(double? value)
         {
             if (value is not null)
@@ -66,9 +62,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(float? value)
         {
             if (value is not null)
@@ -77,9 +71,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(int? value)
         {
             if (value is not null)
@@ -88,9 +80,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(long? value)
         {
             if (value is not null)
@@ -99,9 +89,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(sbyte? value)
         {
             if (value is not null)
@@ -110,9 +98,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(short? value)
         {
             if (value is not null)
@@ -121,9 +107,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(uint? value)
         {
             if (value is not null)
@@ -132,9 +116,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(ulong? value)
         {
             if (value is not null)
@@ -143,9 +125,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON number, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
         public void WriteNumberValue(ushort? value)
         {
             if (value is not null)
@@ -164,100 +144,70 @@ public static class OptionalExtensions
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, decimal? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, double? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, float? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, int? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, long? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, sbyte? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, short? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, uint? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, ulong? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteNumberValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a numeric value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteNumber(Utf8JsonWriter, string, byte?)"/>
         public void WriteNumber(string propertyName, ushort? value)
         {
             writer.WritePropertyName(propertyName);
@@ -275,9 +225,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON string, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteStringValue(Utf8JsonWriter, DateTime?)"/>
         public void WriteStringValue(DateTimeOffset? value)
         {
             if (value is not null)
@@ -286,9 +234,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <summary>
-        /// Writes <paramref name="value"/> as a JSON string, or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteStringValue(Utf8JsonWriter, DateTime?)"/>
         public void WriteStringValue(Guid? value)
         {
             if (value is not null)
@@ -307,20 +253,14 @@ public static class OptionalExtensions
             writer.WriteStringValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a string value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteString(Utf8JsonWriter, string, DateTime?)"/>
         public void WriteString(string propertyName, DateTimeOffset? value)
         {
             writer.WritePropertyName(propertyName);
             writer.WriteStringValue(value);
         }
 
-        /// <summary>
-        /// Writes a property named <paramref name="propertyName"/> with a string value,
-        /// or a JSON null if <paramref name="value"/> is null.
-        /// </summary>
+        /// <inheritdoc cref="WriteString(Utf8JsonWriter, string, DateTime?)"/>
         public void WriteString(string propertyName, Guid? value)
         {
             writer.WritePropertyName(propertyName);
