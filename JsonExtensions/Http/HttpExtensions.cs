@@ -56,7 +56,7 @@ public static class HttpExtensions
             return await response.Content.ReadAsJsonAsync(cancellationToken).ConfigureAwait(false);
         }
 
-        /// <inheritdoc cref="GetJsonAsync(HttpClient, Uri, CancellationToken)"/>
+        /// <inheritdoc cref="GetJsonAsync(HttpClient, Uri, CancellationToken)" />
         public async Task<JsonElement> GetJsonAsync(
             string requestUri,
             CancellationToken cancellationToken = default
