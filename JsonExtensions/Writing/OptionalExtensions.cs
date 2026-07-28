@@ -44,7 +44,7 @@ public static class OptionalExtensions
                 writer.WriteNullValue();
         }
 
-        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)"/>
+        /// <inheritdoc cref="WriteNumberValue(Utf8JsonWriter, byte?)" />
         public void WriteNumberValue(decimal? value)
         {
             if (value is not null)
