@@ -16,7 +16,7 @@ public static class PathExtensions
         /// Traverses the element along the dot-separated <paramref name="propertyPath"/> and returns
         /// the matching descendant, or null if any segment is missing.
         /// </summary>
-        /// <remarks>Supports simple dot-notation paths only, e.g. <c>"foo.bar.baz"</c>.</remarks>
+        /// <remarks>Supports simple dot-notation paths only, e.g., <c>"foo.bar.baz"</c>.</remarks>
         public JsonElement? GetPropertyByPathOrNull(string propertyPath)
         {
             var propertyNames = propertyPath.Split('.', StringSplitOptions.RemoveEmptyEntries);
