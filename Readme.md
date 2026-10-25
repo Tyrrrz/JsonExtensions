@@ -1,6 +1,6 @@
 # JsonExtensions
 
-[![Status](https://img.shields.io/badge/status-maintenance-ffd700.svg)](https://github.com/Tyrrrz/.github/blob/prime/docs/project-status.md)
+[![Status](https://img.shields.io/badge/status-discontinued-e4181c.svg)](https://github.com/Tyrrrz/.github/blob/master/docs/project-status.md)
 [![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7)](https://tyrrrz.me/ukraine)
 [![Build](https://img.shields.io/github/actions/workflow/status/Tyrrrz/JsonExtensions/main.yml?branch=prime)](https://github.com/Tyrrrz/JsonExtensions/actions)
 [![Coverage](https://img.shields.io/codecov/c/github/Tyrrrz/JsonExtensions/prime)](https://codecov.io/gh/Tyrrrz/JsonExtensions)
@@ -20,6 +20,9 @@
 </p>
 
 **JsonExtensions** is a library that provides a set of helpful utilities for types defined in the [`System.Text.Json`](https://learn.microsoft.com/dotnet/api/system.text.json) namespace.
+
+> [!WARNING]
+> This project has been absorbed by [PowerKit](https://github.com/Tyrrrz/PowerKit).
 
 ## Terms of use<sup>[[?]](https://github.com/Tyrrrz/.github/blob/prime/docs/why-so-political.md)</sup>
 
