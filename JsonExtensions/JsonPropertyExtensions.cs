@@ -1,13 +1,12 @@
 using System.Text.Json;
 
-namespace JsonExtensions.Reading;
+namespace JsonExtensions;
 
 /// <summary>
-/// General-purpose extensions for JSON types.
+/// Extensions for <see cref="JsonProperty" />.
 /// </summary>
-public static class MiscExtensions
+public static class JsonPropertyExtensions
 {
-    /// <inheritdoc cref="MiscExtensions" />
     extension(JsonProperty property)
     {
         /// <summary>

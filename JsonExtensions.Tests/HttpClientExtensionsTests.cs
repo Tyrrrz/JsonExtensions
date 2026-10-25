@@ -1,12 +1,11 @@
 using System.Net.Http;
 using System.Threading.Tasks;
-using FluentAssertions;
-using JsonExtensions.Http;
+using AwesomeAssertions;
 using Xunit;
 
-namespace JsonExtensions.Tests.Http;
+namespace JsonExtensions.Tests;
 
-public class HttpExtensionsTests
+public class HttpClientExtensionsTests
 {
     [Fact]
     public async Task GetJsonAsync_Test()

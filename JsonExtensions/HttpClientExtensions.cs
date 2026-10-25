@@ -4,36 +4,13 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace JsonExtensions.Http;
+namespace JsonExtensions;
 
 /// <summary>
-/// Extensions for working with JSON over HTTP, bridging <see cref="System.Text.Json"/> and <see cref="System.Net.Http"/>.
+/// Extensions for <see cref="HttpClient" />.
 /// </summary>
-public static class HttpExtensions
+public static class HttpClientExtensions
 {
-    /// <inheritdoc cref="HttpExtensions" />
-    extension(HttpContent content)
-    {
-        /// <summary>
-        /// Reads the HTTP content body and deserializes it as a <see cref="JsonElement"/>.
-        /// </summary>
-        public async Task<JsonElement> ReadAsJsonAsync(
-            CancellationToken cancellationToken = default
-        )
-        {
-            using var stream = await content
-                .ReadAsStreamAsync(cancellationToken)
-                .ConfigureAwait(false);
-
-            using var document = await JsonDocument
-                .ParseAsync(stream, default, cancellationToken)
-                .ConfigureAwait(false);
-
-            return document.RootElement.Clone();
-        }
-    }
-
-    /// <inheritdoc cref="HttpExtensions" />
     extension(HttpClient http)
     {
         /// <summary>
