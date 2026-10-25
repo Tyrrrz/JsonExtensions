@@ -1,15 +1,13 @@
 using System;
 using System.Text.Json;
 
-namespace JsonExtensions.Writing;
+namespace JsonExtensions;
 
 /// <summary>
-/// Nullable-aware extensions for <see cref="Utf8JsonWriter"/> that emit a JSON null token
-/// in place of absent values.
+/// Extensions for <see cref="Utf8JsonWriter" />.
 /// </summary>
-public static class OptionalExtensions
+public static class Utf8JsonWriterExtensions
 {
-    /// <inheritdoc cref="OptionalExtensions" />
     extension(Utf8JsonWriter writer)
     {
         /// <summary>

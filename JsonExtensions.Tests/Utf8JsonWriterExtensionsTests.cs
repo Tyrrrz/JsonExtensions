@@ -1,12 +1,11 @@
 using System;
-using FluentAssertions;
+using AwesomeAssertions;
 using JsonExtensions.Tests.Utils;
-using JsonExtensions.Writing;
 using Xunit;
 
-namespace JsonExtensions.Tests.Writing;
+namespace JsonExtensions.Tests;
 
-public class OptionalExtensionsTests
+public class Utf8JsonWriterExtensionsTests
 {
     [Fact]
     public void WriteBoolean_Actual_Test()

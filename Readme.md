@@ -43,7 +43,7 @@ To learn more about the war and how you can help, [click here](https://tyrrrz.me
 
 ### Parsing JsonElement
 
-You can use the static methods on the `Json` class to parse JSON directly into a stateless `JsonElement` instance, without having to deal with `JsonDocument` in the process:
+You can use the static extensions methods on the `JsonElement` class to parse it directly from a JSON string, without having to deal with `JsonDocument` in the process:
 
 ```csharp
 using JsonExtensions;
@@ -51,12 +51,12 @@ using JsonExtensions;
 var jsonRaw =
     """
     {
-        "foo": "bar"
+      "foo": "bar"
     }
     """;
 
-var jsonElement = Json.Parse(jsonRaw); // returns JsonElement
-var jsonElement = Json.TryParse(jsonRaw); // returns null in case of invalid JSON
+var jsonElement = JsonElement.Parse(jsonRaw); // returns JsonElement
+var jsonElement = JsonElement.TryParse(jsonRaw); // returns null in case of invalid JSON
 ```
 
 ### Null-safe reading
@@ -162,28 +162,3 @@ using var request = new HttpRequestMessage(HttpMethod.Post, "...");
 using var response = await http.SendAsync(request);
 var json = await response.Content.ReadAsJsonAsync(); // returns JsonElement
 ```
-
-### Accessing children by path
-
-Using `jsonElement.GetPropertyByPathOrNull(...)` or `jsonElement.GetPropertyByPath(...)`, you can get an inner child by its path:
-
-```csharp
-var json =
-    """
-    {
-        "foo" : {
-            "bar": {
-                "baz": 13
-            }
-        }
-    }
-    """;
-
-var child = json.GetPropertyByPath("foo.bar.baz");
-
-var value = child.GetInt32(); // 13
-```
-
-> [!WARNING]
-> Note this only supports basic paths involving child access operators.
-> It doesn't (yet) have full support for JPath.
