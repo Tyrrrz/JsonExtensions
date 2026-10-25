@@ -64,7 +64,7 @@ var jsonElement = JsonElement.TryParse(jsonRaw); // returns null in case of inva
 This library offers many extension methods for `JsonElement` that allow you to read its content in a more fault-tolerant way:
 
 ```csharp
-using JsonExtensions.Reading;
+using JsonExtensions;
 
 var jsonElement = ...;
 
@@ -134,7 +134,7 @@ var maybeInt32 = jsonElement.GetPropertyOrNull("prop")?.GetInt32OrNull();
 Similarly, there are also extension methods for `Utf8JsonWriter` that allow writing nullable versions of common value types:
 
 ```csharp
-using JsonExtensions.Writing;
+using JsonExtensions;
 
 var writer = new Utf8JsonWriter(...);
 
@@ -150,7 +150,7 @@ writer.WriteBoolean("prop", new bool?());
 To make it easier to read JSON that comes from HTTP responses, this library also provides a few extension methods for `HttpContent` and `HttpClient`:
 
 ```csharp
-using JsonExtensions.Http;
+using JsonExtensions;
 
 var http = new HttpClient();
 
